@@ -18,15 +18,9 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
-interface Props {
-  children: React.ReactNode
-}
-
 const Links = ['Dashboard', 'Projects', 'Team']
 
-const NavLink = (props: Props) => {
-  const { children } = props
-
+const NavLink = ({ children }) => {
   return (
     <Box
       as="a"
@@ -43,7 +37,7 @@ const NavLink = (props: Props) => {
   )
 }
 
-export default function Simple() {
+export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -101,7 +95,6 @@ export default function Simple() {
         ) : null}
       </Box>
 
-      <Box p={4}>Main Content Here</Box>
     </>
   )
 }
