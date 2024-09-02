@@ -1,9 +1,12 @@
 import React from 'react'
 import Header from '../../layout/header/Header'
-import HeroSection from '../../components/heroSection/HeroSection'
+import HeroSection from '../../sections/heroSection/HeroSection'
 import ProjectCard from '../../components/cards/ProjectCard'
-import About from '../../components/about/About'
-import FaqAccordion from '../../components/accordion/FaqAccordion'
+import About from '../../sections/about/About'
+import FaqAccordion from '../../sections/accordion/FaqAccordion'
+import Service from '../../sections/service/Service'
+import Contact from '../contact/Contact'
+import Footer from '../../layout/footer/Footer'
 
 export const Main = () => {
   return (
@@ -17,8 +20,10 @@ export const Main = () => {
         <ProjectCard />
       </div>
       <About />
-      <FaqAccordion/>
-     
+      <FaqAccordion />
+      <Service />
+      <Contact/>
+      <Footer/>
     </div>
   )
 }
