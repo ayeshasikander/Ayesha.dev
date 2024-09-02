@@ -1,61 +1,84 @@
 import {
+  Heading,
+  Avatar,
   Box,
   Center,
-  Heading,
+  Image,
+  Flex,
   Text,
   Stack,
-  Avatar,
+  Button,
   useColorModeValue,
-} from '@chakra-ui/react'
-import  {image}  from '../../assets/image'
+} from '@chakra-ui/react';
 
 export default function ProjectCard() {
   return (
     <Center py={6}>
       <Box
-        maxW={'445px'}
+        maxW={'270px'}
         w={'full'}
-        bg={useColorModeValue('white', 'gray.900')}
+        bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
         rounded={'md'}
-        p={6}
         overflow={'hidden'}>
-        <Box h={'210px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-          <img
-            src={image.logo}
-            fill
-            alt="Example"
+        <Image
+          h={'120px'}
+          w={'full'}
+          src={
+            'https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
+          }
+          objectFit="cover"
+          alt="#"
+        />
+        <Flex justify={'center'} mt={-12}>
+          <Avatar
+            size={'xl'}
+            src={
+              'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
+            }
+            css={{
+              border: '2px solid white',
+            }}
           />
-        </Box>
-        <Stack>
-          <Text
-            color={'green.500'}
-            textTransform={'uppercase'}
-            fontWeight={800}
-            fontSize={'sm'}
-            letterSpacing={1.1}>
-            Blog
-          </Text>
-          <Heading
-            color={useColorModeValue('gray.700', 'white')}
-            fontSize={'2xl'}
-            fontFamily={'body'}>
-            Boost your conversion rate
-          </Heading>
-          <Text color={'gray.500'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-          </Text>
-        </Stack>
-        <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
-          <Avatar src={'https://avatars0.githubusercontent.com/u/1164541?v=4'} />
-          <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text fontWeight={600}>Achim Rolle</Text>
-            <Text color={'gray.500'}>Feb 08, 2021 · 6min read</Text>
+        </Flex>
+
+        <Box p={6}>
+          <Stack spacing={0} align={'center'} mb={5}>
+            <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+              John Doe
+            </Heading>
+            <Text color={'gray.500'}>Frontend Developer</Text>
           </Stack>
-        </Stack>
+
+          <Stack direction={'row'} justify={'center'} spacing={6}>
+            <Stack spacing={0} align={'center'}>
+              <Text fontWeight={600}>23k</Text>
+              <Text fontSize={'sm'} color={'gray.500'}>
+                Followers
+              </Text>
+            </Stack>
+            <Stack spacing={0} align={'center'}>
+              <Text fontWeight={600}>23k</Text>
+              <Text fontSize={'sm'} color={'gray.500'}>
+                Followers
+              </Text>
+            </Stack>
+          </Stack>
+
+          <Button
+            w={'full'}
+            mt={8}
+            bg={useColorModeValue('#151f21', 'gray.900')}
+            color={'white'}
+            rounded={'md'}
+            _hover={{
+              transform: 'translateY(-2px)',
+              boxShadow: 'lg',
+            }}>
+            Follow
+          </Button>
+        </Box>
       </Box>
     </Center>
-  )
+  );
 }
