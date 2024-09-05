@@ -17,6 +17,14 @@ export const router = createBrowserRouter([
         path: "contact",
         element: <LazyComponent path="contact/Contact" />,
       },
+      {
+        path: "portfolio",
+        element: <LazyComponent path="portfolio/Portfolio" />,
+      },
+      {
+        path: "profile",
+        element: <LazyComponent path="profile/Profile" />,
+      }
     ],
   },
 ]);
