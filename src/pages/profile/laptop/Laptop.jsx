@@ -1,4 +1,5 @@
 import React from 'react';
+import Intro from '../../../sections/introSection/Intro';
 import '../../../style/profileLayout/profileLayout.scss';
 
 const Laptop = () => {
@@ -7,7 +8,7 @@ const Laptop = () => {
             <div class="laptop">
                 <div class="screen">
                     <div class="header"></div>
-                    <div class="text">Hello MackBook</div>
+                    <Intro />
                 </div>
                 <div class="keyboard"></div>
             </div>
