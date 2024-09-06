@@ -1,15 +1,20 @@
 import React from 'react';
 import Laptop from './laptop/Laptop';
 import Mobile from './mobile/Mobile';
-import { useMediaQuery } from '@chakra-ui/react';
+import { useMediaQuery,Flex } from '@chakra-ui/react';
 
 const Profile = () => {
     const [isMobile] = useMediaQuery('(max-width: 500px)');
 
     return (
-        <div>
-            {isMobile ? <Mobile /> : <Laptop />}
-        </div>
+        <Flex 
+        justify="center" 
+        align="center" 
+        height="100vh" 
+        bg="gray.50"
+    >
+        {isMobile ? <Mobile /> : <Laptop />}
+    </Flex>
     )
 }
 
