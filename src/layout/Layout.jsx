@@ -5,7 +5,9 @@ import AppHeader from "./header/Header";
 import { Outlet } from "react-router-dom";
 import '../style/headerLayout/globalHeader.scss'
 
-const { Header, Content, Footer } = Layout;
+const { 
+    Header,
+     Content, Footer } = Layout;
 
 const AppLayout = () => {
     return (
@@ -23,9 +25,9 @@ const AppLayout = () => {
                 <AppHeader />
             </Header>
             <Content
-                style={{
-                    margin: "0 1rem",
-                }}
+              style={{
+                backgroundColor: "black",
+              }}
             >
                 <Outlet />
             </Content>

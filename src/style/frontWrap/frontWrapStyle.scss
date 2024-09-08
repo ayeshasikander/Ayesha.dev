@@ -1,0 +1,13 @@
+.front-wrap {
+  width: 90%;
+  .front-wrap-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    .front-wrap-icon {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+  }
+}
