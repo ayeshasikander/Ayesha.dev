@@ -13,14 +13,14 @@ import {
 
 export default function ProjectCard() {
   return (
-    <Center py={6}>
       <Box
-        maxW={'270px'}
         w={'full'}
+        h={'full'}
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
         rounded={'md'}
-        overflow={'hidden'}>
+        overflow={'hidden'}
+        >
         <Image
           h={'120px'}
           w={'full'}
@@ -30,17 +30,7 @@ export default function ProjectCard() {
           objectFit="cover"
           alt="#"
         />
-        <Flex justify={'center'} mt={-12}>
-          <Avatar
-            size={'xl'}
-            src={
-              'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
-            }
-            css={{
-              border: '2px solid white',
-            }}
-          />
-        </Flex>
+      
 
         <Box p={6}>
           <Stack spacing={0} align={'center'} mb={5}>
@@ -79,6 +69,5 @@ export default function ProjectCard() {
           </Button>
         </Box>
       </Box>
-    </Center>
   );
 }
