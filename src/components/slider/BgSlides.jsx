@@ -22,9 +22,9 @@ const imgWrap={
 const BgSlides = () => (
   <Carousel 
   effect="fade"
-//    autoplay
-dots={false}
-//    dotPosition='right'
+   autoplay
+// dots={false}
+   dotPosition='right'
   >
     <div>
       <h3 style={contentStyle}>
