@@ -5,10 +5,12 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import "../../style/cardsLayout/cardSlide.scss";
 import ProjectCard from "./ProjectCard";
+import { Typography } from "antd";
 
 export default function ProjectSlides() {
   return (
     <>
+    {/* <Typography>My Portfolio Projects</Typography> */}
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
