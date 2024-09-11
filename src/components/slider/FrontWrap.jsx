@@ -51,6 +51,7 @@ const FrontWrap = () => {
                 // }}
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. In, amet nisi similique delectus, dolor saepe at, ea laborum doloribus libero rem distinctio? Quis quod laudantium, atque rem mollitia officiis quidem?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro dolore odit adipisci ullam voluptates? Illo saepe explicabo, incidunt architecto labore laborum hic. Eius totam accusamus, nulla dicta odit recusandae magnam!
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. In, amet nisi similique delectus, dolor saepe at, ea laborum doloribus libero rem distinctio? Quis quod laudantium, atque rem mollitia officiis quidem?
                 </Col>
                 <Col

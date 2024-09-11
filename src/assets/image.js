@@ -7,6 +7,9 @@ import slide4 from './images/s4.jpg';
 import slide5 from './images/s5.jpg';
 import slide6 from './images/s6.jpg';
 
+import girl1 from './images/hijab.png';
+import girl2 from './images/hijab2.png';
+
 
 export const image ={
     logo,
@@ -16,5 +19,8 @@ export const image ={
     slide3,
     slide4,
     slide5,
-    slide6
+    slide6,
+
+    girl1,
+    girl2
 }

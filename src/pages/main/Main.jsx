@@ -1,17 +1,19 @@
-import React from 'react';
-import HeroSection from '../../sections/heroSection/HeroSection';
+import React from "react";
+// import HeroSection from "../../sections/heroSection/HeroSection";
 // import ProjectCard from '../../components/cards/ProjectCard';
-import About from '../../sections/about/About';
-import FaqAccordion from '../../sections/accordion/FaqAccordion';
-import Service from '../../sections/service/Service';
-import Contact from '../contact/Contact';
-import ProjectSlides from '../../components/cards/ProjectSlides';
-import Cube from '../../sections/cubeFlex/Cube';
+import About from "../../sections/about/About";
+import FaqAccordion from "../../sections/accordion/FaqAccordion";
+import Service from "../../sections/service/Service";
+import Contact from "../contact/Contact";
+import ProjectSlides from "../../components/cards/ProjectSlides";
+import Cube from "../../sections/cubeFlex/Cube";
+import Wrap from "../../components/wrap/Wrap";
 
 const Main = () => {
   return (
     <div>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <Wrap />
       <ProjectSlides />
       <About />
       <Cube />
@@ -19,7 +21,7 @@ const Main = () => {
       <Service />
       <Contact />
     </div>
-  )
-}
+  );
+};
 
 export default Main;

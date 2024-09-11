@@ -26,7 +26,7 @@ const AppLayout = () => {
             </Header>
             <Content
               style={{
-                backgroundColor: "black",
+                backgroundColor: "white",
               }}
             >
                 <Outlet />
