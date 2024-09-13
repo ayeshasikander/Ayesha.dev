@@ -14,10 +14,10 @@ export default function ProjectSlides() {
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
-        autoplay={{
-          delay: 1000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 1000,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
           
@@ -37,7 +37,9 @@ export default function ProjectSlides() {
             spaceBetween: 50,
           },
         }}
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination,
+          //  Autoplay
+          ]}
         className="mySwiper"
       >
         <SwiperSlide>
