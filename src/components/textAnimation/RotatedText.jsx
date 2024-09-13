@@ -1,88 +1,57 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
 import "../../style/cardsLayout/rotatedText.scss";
 
 const RotatedText = () => {
+  const [rotationX, setRotationX] = useState(0);
+  const [rotationY, setRotationY] = useState(0);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const xPosPercent = (e.pageX / window.innerWidth) * 100 - 50;
+      const yPosPercent = (e.pageY / window.innerHeight) * 100 - 50;
+
+      setRotationX(yPosPercent * 0.1);
+      setRotationY(xPosPercent * 0.1);
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  const texts = [
+    "javascript", "html", "css", "scss", "react js", "developer",
+    "programmer", "pwa", "front end", "vision", "ideas", "concept",
+    "design", "ui frame", "library"
+  ];
+
+  const cellCount = texts.length;
+  const rotationAngle = 360 / cellCount;  // Angle for each cell
+
   return (
-    <div className="rotating-text-container">
-      <motion.div
-        className="rotating-text"
-        animate={{ rotateY: 360 }}
-        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-      >
-        <motion.div
-          className="text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+    <div className="wrapper">
+      <div className="scene">
+        <div
+          className="carousel"
+          style={{
+            transform: `rotateY(${rotationY}deg) rotateX(${rotationX}deg)`,
+          }}
         >
-          JavaScript
-        </motion.div>
-        <motion.div
-          className="text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          JavaScript
-        </motion.div>
-        <motion.div
-          className="text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          JavaScript
-        </motion.div>
-        <motion.div
-          className="text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          JavaScript
-        </motion.div>
-        <motion.div
-          className="text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          React
-        </motion.div>
-        <motion.div
-          className="text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
-        >
-          JS
-        </motion.div>
-        <motion.div
-          className="text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 3 }}
-        >
-          SCSS
-        </motion.div>
-        <motion.div
-          className="text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 4 }}
-        >
-          Development
-        </motion.div>
-        <motion.div
-          className="text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 5 }}
-        >
-          Programmers
-        </motion.div>
-      </motion.div>
+          {texts.map((text, index) => (
+            <div
+              className="carousel__cell"
+              key={index}
+              style={{
+                transform: `rotateY(${index * rotationAngle}deg) translateZ(300px)`, // Increase translateZ
+              }}
+            >
+              {text}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

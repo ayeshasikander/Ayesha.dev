@@ -11,6 +11,7 @@ import { image } from "../../assets/image";
 import { IoMdMail } from "react-icons/io";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
+import RotatedText from "../textAnimation/RotatedText";
 
 export default function Wrap() {
   return (
@@ -43,10 +44,9 @@ export default function Wrap() {
         <Box
           w={"full"}
           maxW={"5xl"}
-          h={"20vh"}
+          h={"30vh"}
           display={"flex"}
           justifyContent={"space-between"}
-          border={"1px"}
           gap={20}
         >
           <Text
@@ -83,7 +83,7 @@ export default function Wrap() {
             morning.
           </Text>
         </Box>
-     
+
         <Flex
           position={"absolute"}
           pointerEvents={"none"}
@@ -100,6 +100,45 @@ export default function Wrap() {
             mt={{ base: 12, sm: 16, md: 18 }}
           />
         </Flex>
+
+        {/* Container for image and rotated text */}
+        {/* <Box
+          position={"absolute"}
+          top={0}
+          left={0}
+          right={0}
+          bottom={100}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          overflow={"hidden"}
+        >
+          <img
+            src={image.girl1}
+            alt="hello"
+            style={{
+              height: "100%",
+              objectFit: "cover",
+              position: "absolute",
+              zIndex: 1,
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: '100px',
+              // left: 0,
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 2,
+            }}
+          >
+            <RotatedText />
+          </div>
+        </Box> */}
       </Stack>
     </Container>
   );

@@ -1,37 +1,48 @@
-.rotating-text-container {
-  perspective: 1000px; // Adjust for 3D effect
-  width: 400px; // Adjust width as needed
-  height: 400px; // Adjust height to fit the text
-  position: relative;
-  overflow: hidden; // Hide any overflow
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f000;
+  overflow: hidden;
 }
 
-.rotating-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.scene {
+  width: 400px;
+  height: 400px;
+  perspective: 1000px; /* Increased perspective for a better 3D effect */
+}
+
+.carousel {
   width: 100%;
   height: 100%;
+  position: relative;
   transform-style: preserve-3d;
-  transform: rotateX(0deg) rotateY(0deg);
+  animation: rotate 15s infinite linear; /* Speed of rotation */
 }
 
-.text {
+.carousel__cell {
   position: absolute;
-  width: 100%;
-  text-align: center;
-  font-size: 20px; // Adjust size as needed
-  color: #000; // Adjust color as needed
-  transform-origin: center;
-  opacity: 0;
+  width: 160px; /* Adjusted size */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  text-transform: uppercase;
+  color: #333;
 }
 
-.text:nth-child(1) { transform: rotateY(0deg) translateZ(150px); }
-.text:nth-child(2) { transform: rotateY(40deg) translateZ(150px); }
-.text:nth-child(3) { transform: rotateY(80deg) translateZ(150px); }
-.text:nth-child(4) { transform: rotateY(120deg) translateZ(150px); }
-.text:nth-child(5) { transform: rotateY(160deg) translateZ(150px); }
-.text:nth-child(6) { transform: rotateY(200deg) translateZ(150px); }
-.text:nth-child(7) { transform: rotateY(240deg) translateZ(150px); }
-.text:nth-child(8) { transform: rotateY(280deg) translateZ(150px); }
-.text:nth-child(9) { transform: rotateY(320deg) translateZ(150px); }
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg) rotateX(10deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(10deg);
+  }
+}
