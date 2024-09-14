@@ -4,21 +4,20 @@ import {
   Heading,
   Stack,
   Text,
-  Button,
   Box,
 } from "@chakra-ui/react";
 import { image } from "../../assets/image";
 import { IoMdMail } from "react-icons/io";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
-import RotatedText from "../textAnimation/RotatedText";
+// import RotatedText from "../textAnimation/RotatedText";
 
 export default function Wrap() {
   return (
     <Container
       maxW={"6xl"}
-      border={"1px"}
-      borderColor={"gray.200"}
+      // border={"1px"}
+      // borderColor={"gray.200"}
       borderRadius={"lg"}
       position={"relative"}
       mt={20}
@@ -30,9 +29,9 @@ export default function Wrap() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
       >
-        <Text align={"left"} w={"full"}>
+        {/* <Text align={"left"} w={"full"}>
           React & Next
-        </Text>
+        </Text> */}
         <Heading
           textAlign={"center"}
           fontWeight={800}
@@ -60,7 +59,7 @@ export default function Wrap() {
               Passionate React js developer focused on building practical
               solutions.
             </Text>
-            <Box display={"flex"} gap={2}>
+            <Box display={"flex"} gap={2} mt={4}>
               <Box
                 borderBottom="2px"
                 borderColor="gray.200"
@@ -87,7 +86,7 @@ export default function Wrap() {
         <Flex
           position={"absolute"}
           pointerEvents={"none"}
-          bottom={0}
+          bottom={100}
           left={0}
           right={0}
           justifyContent={"center"}

@@ -26,7 +26,7 @@ const NavLink = ({ name, path }) => {
       px={3}
       py={2}
       rounded={"full"}
-      color={"#EAE8D9"}
+      color={"black"}
       _hover={{
         textDecoration: "none",
         bg: useColorModeValue("#EAE8D9"),
@@ -43,8 +43,20 @@ export default function Header() {
 
   return (
     <>
-      <Box bg={useColorModeValue("black", "black")} px={4}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"} px={{ base: 0, md: 12 }}>
+      <Box
+        px={4}
+        // bg="rgba(245, 245, 245, 0.1)"
+        bg={" rgba(245, 245, 245, 0.041)"}
+        backdropFilter="blur(10px)"
+        boxShadow="0 8px 32px 0 rgba(31, 38, 135, 0.37)"
+        border="1px solid rgba(255, 255, 255, 0.18)"
+      >
+        <Flex
+          h={16}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          px={{ base: 0, md: 12 }}
+        >
           <Box w={90}>
             <img src={image.logo2} alt="Logo" />
           </Box>
