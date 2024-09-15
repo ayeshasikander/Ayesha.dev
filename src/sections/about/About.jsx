@@ -100,14 +100,7 @@ export default function About() {
                             _hover={{ bg: 'red.500' }}>
                             Get started
                         </Button>
-                        <Button
-                            rounded={'full'}
-                            size={'lg'}
-                            fontWeight={'normal'}
-                            px={6}
-                            leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-                            How It Works
-                        </Button>
+                       
                     </Stack>
                 </Stack>
 

@@ -1,49 +1,21 @@
-import {
-    Box,
-    Container,
-    Heading,
-    SimpleGrid,
-    Icon,
-    Text,
-    Stack,
-    HStack,
-    VStack,
-  } from '@chakra-ui/react';
-  import { CheckIcon } from '@chakra-ui/icons';
-  
-  const features = Array.from({ length: 8 }, (_, i) => ({
-    id: i,
-    title: 'Lorem ipsum dolor sit amet',
-    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.',
-  }));
-  
-  export default function Service() {
-    return (
-      <Box p={4}>
-        <Stack spacing={4} as={Container} maxW="3xl" textAlign="center">
-          <Heading fontSize="3xl">This is the headline</Heading>
-          <Text color="gray.600" fontSize="xl">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          </Text>
-        </Stack>
-  
-        <Container maxW="6xl" mt={10}>
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
-            {features.map((feature) => (
-              <HStack key={feature.id} align="top">
-                <Box color="green.400" px={2}>
-                  <Icon as={CheckIcon} />
-                </Box>
-                <VStack align="start">
-                  <Text fontWeight={600}>{feature.title}</Text>
-                  <Text color="gray.600">{feature.text}</Text>
-                </VStack>
-              </HStack>
-            ))}
-          </SimpleGrid>
-        </Container>
-      </Box>
-    );
-  }
-  
+import React from "react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
+import MyService from "../../components/myService/MyService";
+import Workflow from "../../components/workflow/Workflow";
+
+const Service = () => {
+  return (
+    <Box w={"90%"} m={"auto"} h={"100vh"} border={"1px solid red"}>
+      <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={6}>
+        <GridItem w="100%" h="10" bg="blue.500">
+          <MyService />
+        </GridItem>
+        <GridItem w="100%" h="10" bg="blue.500">
+          <Workflow />
+        </GridItem>
+      </Grid>
+    </Box>
+  );
+};
+
+export default Service;
