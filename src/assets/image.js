@@ -10,6 +10,9 @@ import slide6 from './images/s6.jpg';
 import girl1 from './images/hijab.png';
 import girl2 from './images/hijab2.png';
 
+import icon1 from './icons/sr1.jpg';
+import icon2 from './icons/sr2.png';
+import icon3 from './icons/sr3.jpg';
 
 export const image ={
     logo,
@@ -22,5 +25,10 @@ export const image ={
     slide6,
 
     girl1,
-    girl2
+    girl2,
+
+
+    icon1,
+    icon2,
+    icon3
 }

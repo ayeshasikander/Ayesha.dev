@@ -5,12 +5,12 @@ import Workflow from "../../components/workflow/Workflow";
 
 const Service = () => {
   return (
-    <Box w={"90%"} m={"auto"} h={"100vh"} border={"1px solid red"}>
+    <Box w={"90%"} m={"auto"} h={"100vh"}>
       <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={6}>
-        <GridItem w="100%" h="10" bg="blue.500">
+        <GridItem w="100%" h="10">
           <MyService />
         </GridItem>
-        <GridItem w="100%" h="10" bg="blue.500">
+        <GridItem w="100%" h="10">
           <Workflow />
         </GridItem>
       </Grid>
