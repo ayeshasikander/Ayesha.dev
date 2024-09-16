@@ -11,6 +11,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as RouterLink } from "react-router-dom";
 import { image } from "../../assets/image";
+import { useLocation } from "react-router-dom";
 
 const Links = [
   { name: "Home", path: "/" },
@@ -18,7 +19,10 @@ const Links = [
   { name: "Contact", path: "/contact" },
 ];
 
-const NavLink = ({ name, path }) => {
+const NavLink = ({ name, path, isActive }) => {
+  const bg = useColorModeValue(isActive ? "#EAE8D9" : "", "");
+  const color = useColorModeValue(isActive ? "black" : "gray.600", "");
+
   return (
     <Box
       as={RouterLink}
@@ -26,7 +30,9 @@ const NavLink = ({ name, path }) => {
       px={3}
       py={2}
       rounded={"full"}
-      color={"black"}
+      bg={bg}
+      color={color}
+      fontWeight={isActive ? "bold" : "normal"}
       _hover={{
         textDecoration: "none",
         bg: useColorModeValue("#EAE8D9"),
@@ -40,12 +46,12 @@ const NavLink = ({ name, path }) => {
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const location = useLocation();
 
   return (
     <>
       <Box
         px={4}
-        // bg="rgba(245, 245, 245, 0.1)"
         bg={" rgba(245, 245, 245, 0.041)"}
         backdropFilter="blur(10px)"
         boxShadow="0 8px 32px 0 rgba(31, 38, 135, 0.37)"
@@ -68,7 +74,12 @@ export default function Header() {
               ml="auto"
             >
               {Links.map((link) => (
-                <NavLink key={link.name} name={link.name} path={link.path} />
+                <NavLink
+                  key={link.name}
+                  name={link.name}
+                  path={link.path}
+                  isActive={location.pathname === link.path}
+                />
               ))}
 
               <RouterLink to="/profile">
@@ -95,7 +106,12 @@ export default function Header() {
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link.name} name={link.name} path={link.path} />
+                <NavLink
+                  key={link.name}
+                  name={link.name}
+                  path={link.path}
+                  isActive={location.pathname === link.path}
+                />
               ))}
               <RouterLink to="/profile">
                 <Avatar

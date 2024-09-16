@@ -1,11 +1,4 @@
-import {
-  Flex,
-  Container,
-  Heading,
-  Stack,
-  Text,
-  Box,
-} from "@chakra-ui/react";
+import { Flex, Container, Heading, Stack, Text, Box } from "@chakra-ui/react";
 import { image } from "../../assets/image";
 import { IoMdMail } from "react-icons/io";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -54,7 +47,9 @@ export default function Wrap() {
             alignSelf={"flex-start"}
             w={"28%"}
           >
-            <Heading fontSize={"1xl"}>Ayesha Sikander</Heading>
+            <Text fontSize={"1xl"} fontWeight={"bold"}>
+              Ayesha Sikander
+            </Text>
             <Text fontSize={"sm"}>
               Passionate React js developer focused on building practical
               solutions.
@@ -77,7 +72,7 @@ export default function Wrap() {
             alignSelf={"flex-end"}
             w={"25%"}
           >
-            <Heading fontSize={"1xl"}>Quote_</Heading>
+            <Text fontSize={"1xl"} fontWeight={"bold"}>Quote_</Text>
             Emphasizes the journey from concept to reality “Daily Agenda” every
             morning.
           </Text>
