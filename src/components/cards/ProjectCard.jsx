@@ -6,6 +6,7 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
+import "../../style/cardsLayout/animation.scss";
 
 export default function ProjectCard({ item }) {
   return (
@@ -25,6 +26,7 @@ export default function ProjectCard({ item }) {
         bgPos="center"
         bgSize="cover"
         position="relative"
+        className="animated-background"
       >
         <Box
           position="absolute"
@@ -32,10 +34,9 @@ export default function ProjectCard({ item }) {
           left={0}
           right={0}
           bottom={0}
-          bg="blackAlpha.600"
+          bg="blackAlpha.800"
         />
 
-        {/* Content over the background */}
         <Box
           position="absolute"
           top="0"
@@ -53,9 +54,7 @@ export default function ProjectCard({ item }) {
             <Heading fontSize={"2xl"} fontWeight={500}>
               {item.title}
             </Heading>
-            <Text>
-              {item.desc}
-            </Text>
+            <Text>{item.desc}</Text>
           </Stack>
 
           <Stack direction={"row"} justify={"center"} spacing={6} mt={6}>
