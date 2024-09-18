@@ -3,28 +3,16 @@ import { image } from "../../assets/image";
 import { IoMdMail } from "react-icons/io";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
-// import RotatedText from "../textAnimation/RotatedText";
 
 export default function Wrap() {
   return (
-    <Container
-      maxW={"6xl"}
-      // border={"1px"}
-      // borderColor={"gray.200"}
-      borderRadius={"lg"}
-      position={"relative"}
-      mt={20}
-    >
+    <Container maxW={"6xl"} borderRadius={"lg"} position={"relative"} mt={20}>
       {" "}
       <Stack
-        // textAlign={"center"}
         align={"center"}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
       >
-        {/* <Text align={"left"} w={"full"}>
-          React & Next
-        </Text> */}
         <Heading
           textAlign={"center"}
           fontWeight={800}
@@ -32,9 +20,8 @@ export default function Wrap() {
           lineHeight={"110%"}
           fontFamily={"'Archivo Black', sans-serif"}
           textTransform={"uppercase"}
-
         >
-          Meeting scheduling
+          i am Ayesha Sikander
         </Heading>
         <Box
           w={"full"}
@@ -64,9 +51,26 @@ export default function Wrap() {
                 width="40%"
                 my={4}
               />
-              <IoMdMail fontSize={"20px"} />
-              <RiWhatsappFill fontSize={"20px"} />
-              <FaLinkedin fontSize={"20px"} />
+
+              <IoMdMail
+                cursor={"pointer"}
+                fontSize={"20px"}
+                onClick={() => window.open("mailto:sikanderayesha46@gmail.com")}
+              />
+
+              <RiWhatsappFill
+                cursor={"pointer"}
+                fontSize={"20px"}
+                onClick={() => window.open("https://wa.me/+923161248074")}
+              />
+
+              <FaLinkedin
+                cursor={"pointer"}
+                fontSize={"20px"}
+                onClick={() =>
+                  window.open("https://www.linkedin.com/in/ayesha-sikander/")
+                }
+              />
             </Box>
           </Text>
           <Text
@@ -75,7 +79,9 @@ export default function Wrap() {
             alignSelf={"flex-end"}
             w={"25%"}
           >
-            <Text fontSize={"1xl"} fontWeight={"bold"}>Quote_</Text>
+            <Text fontSize={"1xl"} fontWeight={"bold"}>
+              Quote_
+            </Text>
             Emphasizes the journey from concept to reality “Daily Agenda” every
             morning.
           </Text>
@@ -93,49 +99,9 @@ export default function Wrap() {
           <img
             src={image.girl1}
             alt="hello"
-            // height={{ sm: "24rem", lg: "28rem" }}
             mt={{ base: 12, sm: 16, md: 18 }}
           />
         </Flex>
-
-        {/* Container for image and rotated text */}
-        {/* <Box
-          position={"absolute"}
-          top={0}
-          left={0}
-          right={0}
-          bottom={100}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          overflow={"hidden"}
-        >
-          <img
-            src={image.girl1}
-            alt="hello"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              position: "absolute",
-              zIndex: 1,
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              top: '100px',
-              // left: 0,
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              zIndex: 2,
-            }}
-          >
-            <RotatedText />
-          </div>
-        </Box> */}
       </Stack>
     </Container>
   );

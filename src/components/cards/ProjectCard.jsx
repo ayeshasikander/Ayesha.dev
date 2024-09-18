@@ -7,7 +7,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { FaGithub, FaLinkedin, FaShareAlt } from "react-icons/fa";
+import { FaGithub, FaShareAlt } from "react-icons/fa";
 import "../../style/cardsLayout/animation.scss";
 
 const truncateDescription = (desc, limit) => {
