@@ -28,8 +28,11 @@ export default function Wrap() {
         <Heading
           textAlign={"center"}
           fontWeight={800}
-          fontSize={{ base: "3xl", sm: "4xl", md: "8xl" }}
+          fontSize={{ base: "3xl", sm: "4xl", md: "7xl" }}
           lineHeight={"110%"}
+          fontFamily={"'Archivo Black', sans-serif"}
+          textTransform={"uppercase"}
+
         >
           Meeting scheduling
         </Heading>

@@ -5,12 +5,11 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import "../../style/cardsLayout/cardSlide.scss";
 import ProjectCard from "./ProjectCard";
-import { Typography } from "antd";
+import { Practice } from "./portfolio";
 
 export default function ProjectSlides() {
   return (
     <>
-    {/* <Typography>My Portfolio Projects</Typography> */}
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -20,8 +19,6 @@ export default function ProjectSlides() {
         // }}
         pagination={{
           clickable: true,
-          
-
         }}
         breakpoints={{
           640: {
@@ -37,22 +34,17 @@ export default function ProjectSlides() {
             spaceBetween: 50,
           },
         }}
-        modules={[Pagination,
+        modules={[
+          Pagination,
           //  Autoplay
-          ]}
+        ]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <ProjectCard />
-        </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {Practice.map((item) => (
+          <SwiperSlide key={item.id}>
+            <ProjectCard item={item} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

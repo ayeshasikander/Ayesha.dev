@@ -63,7 +63,7 @@ export default function Header() {
           justifyContent={"space-between"}
           px={{ base: 0, md: 12 }}
         >
-          <Box w={90}>
+          <Box w={'60px'}>
             <img src={image.logo2} alt="Logo" />
           </Box>
           <Flex alignItems={"center"}>
