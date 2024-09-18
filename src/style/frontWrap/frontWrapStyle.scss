@@ -2,17 +2,21 @@
   width: 100%;
   overflow: hidden;
   background-color: rgba(39, 38, 38, 0.062);
-  // position: relative;
 
-  .slide-content,
-  .slide-content-reverse {
+  .slide-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .slide-content {
     display: flex;
     gap: 2rem;
     white-space: nowrap;
     position: relative;
 
     .slide-text {
-      font-size: 4rem;
+      font-size: 6rem;
       text-transform: uppercase;
       color: rgb(0, 0, 0);
       font-weight: bold;
@@ -28,27 +32,31 @@
     animation: slide-left 20s linear infinite;
   }
 
-  .slide-content-reverse {
-    animation: slide-right 20s linear infinite;
-  }
-
   @keyframes slide-left {
     0% {
       transform: translateX(0);
     }
     100% {
-      // transform: translateX(-100%);
       transform: translateX(calc(-100% - 1rem * 9));
     }
   }
 
   @keyframes slide-right {
     0% {
-      // transform: translateX(-100%);
       transform: translateX(calc(-100% - 1rem * 9));
     }
     100% {
       transform: translateX(0);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide-container {
+    .slide-content {
+      .slide-text {
+        font-size: 3rem !important;
+      }
     }
   }
 }

@@ -1,43 +1,42 @@
 import { Timeline } from "rsuite";
 import { Typography } from "antd";
-import CreditCardIcon from "@rsuite/icons/legacy/CreditCard";
-import PlaneIcon from "@rsuite/icons/legacy/Plane";
-import TruckIcon from "@rsuite/icons/legacy/Truck";
-import UserIcon from "@rsuite/icons/legacy/User";
 import CheckIcon from "@rsuite/icons/legacy/Check";
 import "rsuite/dist/rsuite.min.css";
+import "../../style/serviceLayout/workFlow.scss";
 
 const Workflow = () => (
   <Timeline
     className="custom-timeline"
     style={{ marginTop: 20, marginBottom: 20 }}
   >
-    <Timeline.Item dot={<CreditCardIcon />}>
-      <Typography>WORKFLOW</Typography>
+    <Timeline.Item>
+      <Typography style={{ fontSize: "1.5rem" }}>WORKFLOW</Typography>
     </Timeline.Item>
-    <Timeline.Item dot={<CreditCardIcon />}>
-      <Typography>Your order starts processing</Typography>
-    </Timeline.Item>
-    <Timeline.Item dot={<PlaneIcon />}>
-      <Typography>[In transit]</Typography>
-      <Typography>Order has been shipped from Beijing to Shanghai</Typography>
-    </Timeline.Item>
-    <Timeline.Item dot={<TruckIcon />}>
-      <Typography>[In transit]</Typography>
+    <Timeline.Item>
+      <Typography>[Project Setup and Planning]</Typography>
       <Typography>
-        Sended from the Shanghai Container Center to the distribution center
+        Initialize project, set up environment, plan features.
       </Typography>
     </Timeline.Item>
-    <Timeline.Item dot={<UserIcon />}>
-      <Typography>[Delivery]</Typography>
+    <Timeline.Item>
+      <Typography>[Coding and Implementation]</Typography>
       <Typography>
-        Shanghai Hongkou District Company Deliverer: Mr. Li, currently sending
-        you a shipment
+        Write code, implement features, follow best practices.
       </Typography>
     </Timeline.Item>
-    <Timeline.Item
-      dot={<CheckIcon style={{ background: "#15b215", color: "#fff" }} />}
-    >
+    <Timeline.Item>
+      <Typography>[Testing and Quality Assurance]</Typography>
+      <Typography>
+        Conduct thorough testing, debug issues, ensure quality.
+      </Typography>
+    </Timeline.Item>
+    <Timeline.Item>
+      <Typography>[Deployment and Maintenance]</Typography>
+      <Typography>
+        Launch product, monitor performance, provide ongoing support.
+      </Typography>
+    </Timeline.Item>
+    <Timeline.Item dot={<CheckIcon className="custom-timeline-icon" />}>
       <Typography>Completed</Typography>
     </Timeline.Item>
   </Timeline>

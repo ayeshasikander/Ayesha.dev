@@ -21,17 +21,17 @@ import {
     MdPhone,
     MdEmail,
     MdLocationOn,
-    MdFacebook,
     MdOutlineEmail,
 } from 'react-icons/md';
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
+import { FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
     return (
-        <Container bg="#9DC4FB" maxW="full" mt={0} centerContent overflow="hidden">
+        <Container bg="#1f1e1e0a" maxW="full" mt={0} centerContent overflow="hidden">
             <Flex>
                 <Box
-                    bg="#02054B"
+                    bg="black"
                     color="white"
                     borderRadius="lg"
                     m={{ sm: 4, md: 16, lg: 10 }}
@@ -56,7 +56,7 @@ export default function Contact() {
                                                 _hover={{ border: '2px solid #1C6FEB' }}
                                                 leftIcon={<MdPhone color="#1970F1" size="20px" />}
                                             >
-                                                +91-988888888
+                                                +92 3161248074
                                             </Button>
                                             <Button
                                                 size="md"
@@ -67,7 +67,7 @@ export default function Contact() {
                                                 _hover={{ border: '2px solid #1C6FEB' }}
                                                 leftIcon={<MdEmail color="#1970F1" size="20px" />}
                                             >
-                                                hello@abc.com
+                                                sikanderayesha46@gmail.com
                                             </Button>
                                             <Button
                                                 size="md"
@@ -78,7 +78,7 @@ export default function Contact() {
                                                 _hover={{ border: '2px solid #1C6FEB' }}
                                                 leftIcon={<MdLocationOn color="#1970F1" size="20px" />}
                                             >
-                                                Karnavati, India
+                                                Lahore, Pakistan
                                             </Button>
                                         </VStack>
                                     </Box>
@@ -94,7 +94,7 @@ export default function Contact() {
                                             size="lg"
                                             isRound
                                             _hover={{ bg: '#0D74FF' }}
-                                            icon={<MdFacebook size="28px" />}
+                                            icon={<FaLinkedin size="28px" color='#ECECEC'/>}
                                         />
                                         <IconButton
                                             aria-label="github"
@@ -102,7 +102,7 @@ export default function Contact() {
                                             size="lg"
                                             isRound
                                             _hover={{ bg: '#0D74FF' }}
-                                            icon={<BsGithub size="28px" />}
+                                            icon={<BsGithub size="28px"color='#ECECEC' />}
                                         />
                                         <IconButton
                                             aria-label="discord"
@@ -110,7 +110,7 @@ export default function Contact() {
                                             size="lg"
                                             isRound
                                             _hover={{ bg: '#0D74FF' }}
-                                            icon={<BsDiscord size="28px" />}
+                                            icon={<BsDiscord size="28px" color='#ECECEC' />}
                                         />
                                     </HStack>
                                 </Box>

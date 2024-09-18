@@ -12,10 +12,10 @@ const Main = () => {
     <div>
       <Wrap />
       <Slide />
-      <Portfolio/>
+      <Portfolio />
       <About />
-      <Cube />
       <Service />
+      <Cube />
       <Contact />
     </div>
   );

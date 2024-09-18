@@ -10,15 +10,16 @@ import slide6 from './images/s6.jpg';
 import girl1 from './images/hijab.png';
 import girl2 from './images/hijab2.png';
 
-import icon1 from './icons/sr1.jpg';
-import icon2 from './icons/sr2.png';
-import icon3 from './icons/sr3.jpg';
+import icon2 from './icons/layout2.png';
+import icon3 from './icons/layout.png';
 
 import pf1 from './images/screencapture-quran-ul-kareem-netlify-app-2024-09-18-11_59_51.png';
 import pf2 from './images/screencapture-green-books-vercel-app-2024-09-18-12_01_35.png';
 import pf3 from './images/screencapture-rejouice-clone-netlify-app-2024-09-18-12_02_05.png';
 import pf4 from './images/screencapture-radiologex-cl-netlify-app-2024-09-18-12_02_30.png';
 import pf5 from './images/screencapture-flickflex-netlify-app-2024-09-18-12_00_34.png';
+
+import code from './video/code.mp4';
 
 export const image ={
     logo,
@@ -33,8 +34,6 @@ export const image ={
     girl1,
     girl2,
 
-
-    icon1,
     icon2,
     icon3,
 
@@ -43,4 +42,6 @@ export const image ={
     pf3,
     pf4,
     pf5,
+
+    code
 }

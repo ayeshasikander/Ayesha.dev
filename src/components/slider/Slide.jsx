@@ -18,6 +18,7 @@ const SlideContent = [
 const Slide = () => {
   return (
     <Box className="slide-container">
+      <Typography className="slide-title" >Langauages & Libraries</Typography>
       <Box className="slide-content">
         {SlideContent.map((slide, index) => (
           <Typography className="slide-text" key={index}>
@@ -25,15 +26,7 @@ const Slide = () => {
           </Typography>
         ))}
       </Box>
-      <Box className="slide-content-reverse">
-        {SlideContent.slice()
-          .reverse()
-          .map((slide, index) => (
-            <Typography className="slide-text" key={index}>
-              {slide}
-            </Typography>
-          ))}
-      </Box>
+     
     </Box>
   );
 };

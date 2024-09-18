@@ -5,9 +5,8 @@ import {
   Text,
   Box,
   Container,
-  Heading,
   SimpleGrid,
-  Stack,
+  Heading,
 } from "@chakra-ui/react";
 import MyService from "../../components/myService/MyService";
 import Workflow from "../../components/workflow/Workflow";
@@ -18,7 +17,7 @@ const features = [
     title: <MyService />,
   },
   {
-    id: 1,
+    id: 2,
     title: <Workflow />,
   },
 ];
@@ -26,10 +25,7 @@ const features = [
 export default function Service() {
   return (
     <Box p={4}>
-      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-        <Heading fontSize={"3xl"} mt={20}>This is the headline</Heading>
-      </Stack>
-
+      <Heading align={"center"} fontSize={"3xl"}>MyServices</Heading>
       <Container maxW={"6xl"} mt={20} mb={20}>
         <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacing={10}>
           {features.map((feature) => (
