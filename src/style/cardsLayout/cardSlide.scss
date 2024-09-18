@@ -42,11 +42,12 @@ body {
     width: 8px;
     height: 8px;
     background-color: #fff;
+    border: 1px solid black;
     opacity: 1;
   }
 
   .swiper-pagination-bullet-active {
-    background-color: #007aff;
+    background-color: #030303;
   }
 
   .swiper-pagination {

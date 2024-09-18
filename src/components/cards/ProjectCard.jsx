@@ -6,9 +6,36 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin, FaShareAlt } from "react-icons/fa";
 import "../../style/cardsLayout/animation.scss";
 
+const truncateDescription = (desc, limit) => {
+  const words = desc.split(" ");
+  if (words.length > limit) {
+    return words.slice(0, limit).join(" ") + "...";
+  }
+  return desc;
+};
 export default function ProjectCard({ item }) {
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: item.title,
+          text: item.desc,
+          url: item.liveLink,
+        });
+        console.log("Share was successful.");
+      } catch (error) {
+        console.error("Share failed:", error);
+      }
+    } else {
+      alert("Share API not supported on this browser.");
+    }
+  };
+
+  const wordLimit = 20;
   return (
     <Box
       w={"full"}
@@ -54,33 +81,52 @@ export default function ProjectCard({ item }) {
             <Heading fontSize={"2xl"} fontWeight={500}>
               {item.title}
             </Heading>
-            <Text>{item.desc}</Text>
+            <Text fontSize={"sm"}>{truncateDescription(item.desc, wordLimit)}</Text>
           </Stack>
 
           <Stack direction={"row"} justify={"center"} spacing={6} mt={6}>
-            <Stack spacing={0} align={"center"}>
-              <Text fontWeight={600}>23k</Text>
-              <Text fontSize={"sm"}>Followers</Text>
-            </Stack>
-            <Stack spacing={0} align={"center"}>
-              <Text fontWeight={600}>23k</Text>
-              <Text fontSize={"sm"}>Following</Text>
-            </Stack>
+            <Link
+              style={{ color: "white" }}
+              to={item.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <Stack spacing={0} align={"center"}>
+                <FaGithub />
+                <Text fontSize={"sm"}>GitHub</Text>
+              </Stack>
+            </Link>
+            
+            <Button
+              onClick={handleShare}
+              variant="link"
+              colorScheme="teal"
+              aria-label="Share"
+            >
+              <Stack spacing={0} align={"center"}>
+                <FaShareAlt />
+                <Text fontSize={"sm"}>Share</Text>
+              </Stack>
+            </Button>
           </Stack>
 
-          <Button
-            w={"full"}
-            mt={8}
-            bg={useColorModeValue("#151f21", "gray.900")}
-            color={"white"}
-            rounded={"md"}
-            _hover={{
-              transform: "translateY(-2px)",
-              boxShadow: "lg",
-            }}
-          >
-            Follow
-          </Button>
+          <Link to={item.liveLink} target="_blank" rel="noopener noreferrer">
+            {" "}
+            <Button
+              w={"full"}
+              mt={8}
+              bg={useColorModeValue("#151f21", "gray.900")}
+              color={"white"}
+              rounded={"md"}
+              _hover={{
+                transform: "translateY(-2px)",
+                boxShadow: "lg",
+              }}
+            >
+              Live Link
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Box>
