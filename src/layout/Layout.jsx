@@ -22,7 +22,7 @@ const AppLayout = () => {
       >
         <AppHeader />
       </Header>
-      <Content style={{marginTop:'3rem'}}>
+      <Content style={{marginTop:'4rem'}}>
         <Outlet />
       </Content>
       <Footer style={{ padding: 0, textAlign: "center" }}>

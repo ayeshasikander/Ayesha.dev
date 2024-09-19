@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import MyService from "../../components/myService/MyService";
 import Workflow from "../../components/workflow/Workflow";
+import LineDivider from "../../components/line/LineDevder";
 
 const features = [
   {
@@ -25,7 +26,18 @@ const features = [
 export default function Service() {
   return (
     <Box p={4}>
-      <Heading align={"center"} fontSize={"3xl"}>MyServices</Heading>
+      <Box
+        display={"flex"}
+        justifyContent={"center"}
+        flexDirection={"column"}
+        alignItems={"center"}
+        paddingTop={"2rem"}
+      >
+        <Heading align={"center"} fontSize={"2xl"}>
+          My Services
+        </Heading>
+        <LineDivider />
+      </Box>
       <Container maxW={"6xl"} mt={20} mb={20}>
         <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} spacing={10}>
           {features.map((feature) => (

@@ -18,8 +18,9 @@ export default function Wrap() {
           fontWeight={800}
           fontSize={{ base: "3xl", sm: "4xl", md: "7xl" }}
           lineHeight={"110%"}
-          fontFamily={"'Archivo Black', sans-serif"}
+          fontFamily={"heading"}
           textTransform={"uppercase"}
+          color={"primaryColor"}
         >
           i am Ayesha Sikander
         </Heading>

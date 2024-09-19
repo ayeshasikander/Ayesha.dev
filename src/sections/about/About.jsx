@@ -8,6 +8,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { image } from "../../assets/image";
+import LineDevider from "../../components/line/LineDevder";
 
 export default function About() {
   return (
@@ -51,29 +52,30 @@ export default function About() {
         </Flex>
 
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: "3xl", lg: "2xl" }}
-          >
-            <Text
-              as={"span"}
-              position={"relative"}
-              _after={{
-                content: "''",
-                width: "full",
-                height: "30%",
-                position: "absolute",
-                bottom: 1,
-                left: 0,
-                bg: "red.400",
-                zIndex: -1,
-              }}
+          <Box>
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: "3xl", lg: "2xl" }}
             >
-              About me,
-            </Text>
-           
-          </Heading>
+              <Text
+                as={"span"}
+                position={"relative"}
+                _after={{
+                  content: "''",
+                  width: "full",
+                  height: "30%",
+                  position: "absolute",
+                  bottom: 1,
+                  left: 0,
+                  bg: "red.400",
+                  zIndex: -1,
+                }}
+              >
+                About Me
+              </Text>
+            </Heading>
+            <LineDevider />
+          </Box>
           <Text color={"gray.500"}>
             Snippy is a rich coding snippets app that lets you create your own
             code snippets, categorize them, and even sync them in the cloud so

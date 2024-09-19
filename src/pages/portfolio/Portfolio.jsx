@@ -1,15 +1,25 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 import ProjectSlides from "../../components/cards/ProjectSlides";
 import "../../style/cardsLayout/portfolio.scss";
+import LineDivider from "../../components/line/LineDevder";
 
 const Portfolio = () => {
   return (
     <>
       <Box className="portfolio">
-        <Text fontWeight="bold" fontSize="2rem" textAlign="center">
-          My Portfolio Projects
-        </Text>
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          flexDirection={"column"}
+          alignItems={"center"}
+          paddingTop={"2rem"}
+        >
+         <Heading align={"center"} fontSize={"2xl"}>
+          My Portfolio
+        </Heading>
+          <LineDivider />
+        </Box>
         <ProjectSlides />
       </Box>
     </>

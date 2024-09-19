@@ -115,50 +115,7 @@ export default function Contact() {
                                     </HStack>
                                 </Box>
                             </WrapItem>
-                            <WrapItem>
-                                <Box bg="white" borderRadius="lg">
-                                    <Box m={8} color="#0B0E3F">
-                                        <VStack spacing={5}>
-                                            <FormControl id="name">
-                                                <FormLabel>Your Name</FormLabel>
-                                                <InputGroup borderColor="#E0E1E7">
-                                                    <InputLeftElement pointerEvents="none">
-                                                        <BsPerson color="gray.800" />
-                                                    </InputLeftElement>
-                                                    <Input type="text" size="md" />
-                                                </InputGroup>
-                                            </FormControl>
-                                            <FormControl id="email">
-                                                <FormLabel>Email</FormLabel>
-                                                <InputGroup borderColor="#E0E1E7">
-                                                    <InputLeftElement pointerEvents="none">
-                                                        <MdOutlineEmail color="gray.800" />
-                                                    </InputLeftElement>
-                                                    <Input type="email" size="md" />
-                                                </InputGroup>
-                                            </FormControl>
-                                            <FormControl id="message">
-                                                <FormLabel>Message</FormLabel>
-                                                <Textarea
-                                                    borderColor="gray.300"
-                                                    _hover={{ borderColor: 'gray.300' }}
-                                                    placeholder="Message"
-                                                />
-                                            </FormControl>
-                                            <FormControl id="submit" float="right">
-                                                <Button
-                                                    variant="solid"
-                                                    bg="#0D74FF"
-                                                    color="white"
-                                                    _hover={{}}
-                                                >
-                                                    Send Message
-                                                </Button>
-                                            </FormControl>
-                                        </VStack>
-                                    </Box>
-                                </Box>
-                            </WrapItem>
+                            
                         </Wrap>
                     </Box>
                 </Box>

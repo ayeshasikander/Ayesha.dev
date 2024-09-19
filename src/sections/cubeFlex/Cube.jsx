@@ -3,7 +3,7 @@ import '../../style/cardsLayout/cube.scss';
 
 const Cube = () => {
     return (
-        <div>
+        <div className="container">
             <div className="cube-container">
                 <div className="cube">
                     <div className="face front"><span>Hello</span></div>

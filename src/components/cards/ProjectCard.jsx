@@ -78,10 +78,15 @@ export default function ProjectCard({ item }) {
           color="white"
         >
           <Stack spacing={3} align={"center"}>
-            <Heading fontSize={"2xl"} fontWeight={500}>
+            <Heading
+              fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+              fontWeight={{base:"300", md:"400", lg:"500"}}
+            >
               {item.title}
             </Heading>
-            <Text fontSize={"sm"}>{truncateDescription(item.desc, wordLimit)}</Text>
+            <Text fontSize={{ base: "14px", md: "16px", lg: "18px" }}>
+              {truncateDescription(item.desc, wordLimit)}
+            </Text>
           </Stack>
 
           <Stack direction={"row"} justify={"center"} spacing={6} mt={6}>
@@ -97,7 +102,7 @@ export default function ProjectCard({ item }) {
                 <Text fontSize={"sm"}>GitHub</Text>
               </Stack>
             </Link>
-            
+
             <Button
               onClick={handleShare}
               variant="link"
