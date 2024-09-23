@@ -30,24 +30,24 @@ const MyService = () => {
             {/* </Box> */}
           </GridItem>
           <GridItem w="100%">
-            <Heading fontSize={"2xl"}>
+            <Heading fontSize={"2xl"} color={"primaryColor"}>
               Responsive Layout for your Design
             </Heading>
             <List spacing={3} mt={4}>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="green.500" />
+                <ListIcon as={MdCheckCircle} color="primaryColor" />
                 Landing page
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="green.500" />
+                <ListIcon as={MdCheckCircle} color="primaryColor" />
                 Information portals
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="green.500" />
+                <ListIcon as={MdCheckCircle} color="primaryColor" />
                 Website and business cards
               </ListItem>
               <ListItem>
-                <ListIcon as={MdSettings} color="green.500" />
+                <ListIcon as={MdSettings} color="primaryColor" />
                 Web Applications
               </ListItem>
             </List>
@@ -64,7 +64,7 @@ const MyService = () => {
           </GridItem>
           <GridItem w="100%">
             <Text>Do you haven't a design?</Text>
-            <Heading fontSize={"2xl"}>
+            <Heading fontSize={"2xl"} color={"primaryColor"}>
               Choose a designer and order a layout
             </Heading>
           </GridItem>
@@ -72,7 +72,15 @@ const MyService = () => {
       </Box>
       <Button
         m={4}
-        sx={{ border: "1px solid black", color: "black", fontWeight: "bold" }}
+        bgColor={"primaryColor"}
+        sx={{
+          border: "1px solid #992400ef",
+          color: "white",
+          fontWeight: "bold",
+          "&:hover": {
+            backgroundColor: "secondaryColor",
+          },
+        }}
         onClick={onOpen}
       >
         Contact Me

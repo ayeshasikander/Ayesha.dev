@@ -11,9 +11,9 @@ const Main = () => {
   return (
     <div>
       <Wrap />
-      <Slide />
+      {/* <Slide />
       <Portfolio />
-      <About />
+      <About /> */}
       <Service />
       <Cube />
       <Contact />

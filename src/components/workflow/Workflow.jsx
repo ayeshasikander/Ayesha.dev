@@ -10,7 +10,7 @@ const Workflow = () => (
     style={{ marginTop: 20, marginBottom: 20 }}
   >
     <Timeline.Item>
-      <Typography style={{ fontSize: "1.5rem" }}>WORKFLOW</Typography>
+      <Typography style={{ fontSize: "1.5rem",fontWeight:"bold", color:"#992400" }}>WORKFLOW</Typography>
     </Timeline.Item>
     <Timeline.Item>
       <Typography>[Project Setup and Planning]</Typography>

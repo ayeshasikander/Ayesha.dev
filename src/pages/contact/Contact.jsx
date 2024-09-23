@@ -45,33 +45,30 @@ export default function Contact() {
                 <Button
                   size="md"
                   height="48px"
-                  width="200px"
                   variant="ghost"
                   color="#DCE2FF"
-                  _hover={{ border: "2px solid #1C6FEB" }}
-                  leftIcon={<MdPhone color="#1970F1" size="20px" />}
+                  _hover={{ border: "1px solid #C05A1A" }}
+                  leftIcon={<MdPhone color="#C05A1A" size="20px" />}
                 >
                   +92 3161248074
                 </Button>
                 <Button
                   size="md"
                   height="48px"
-                  width="200px"
                   variant="ghost"
                   color="#DCE2FF"
-                  _hover={{ border: "2px solid #1C6FEB" }}
-                  leftIcon={<MdEmail color="#1970F1" size="20px" />}
+                  _hover={{ border: "1px solid #C05A1A" }}
+                  leftIcon={<MdEmail color="#C05A1A" size="20px" />}
                 >
                   sikanderayesha46@gmail.com
                 </Button>
                 <Button
                   size="md"
                   height="48px"
-                  width="200px"
                   variant="ghost"
                   color="#DCE2FF"
-                  _hover={{ border: "2px solid #1C6FEB" }}
-                  leftIcon={<MdLocationOn color="#1970F1" size="20px" />}
+                  _hover={{ border: "1px solid #C05A1A" }}
+                  leftIcon={<MdLocationOn color="#C05A1A" size="20px" />}
                 >
                   Lahore, Pakistan
                 </Button>
@@ -88,7 +85,7 @@ export default function Contact() {
                 variant="ghost"
                 size="lg"
                 isRound
-                _hover={{ bg: "#0D74FF" }}
+                _hover={{ bg: "#C05A1A" }}
                 icon={<FaLinkedin size="28px" color="#ECECEC" />}
               />
               <IconButton
@@ -96,7 +93,7 @@ export default function Contact() {
                 variant="ghost"
                 size="lg"
                 isRound
-                _hover={{ bg: "#0D74FF" }}
+                _hover={{ bg: "#C05A1A" }}
                 icon={<BsGithub size="28px" color="#ECECEC" />}
               />
               <IconButton
@@ -104,7 +101,7 @@ export default function Contact() {
                 variant="ghost"
                 size="lg"
                 isRound
-                _hover={{ bg: "#0D74FF" }}
+                _hover={{ bg: "#C05A1A" }}
                 icon={<BsDiscord size="28px" color="#ECECEC" />}
               />
             </HStack>
