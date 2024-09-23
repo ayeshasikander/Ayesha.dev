@@ -1,21 +1,13 @@
-import React from 'react';
-import Laptop from './laptop/Laptop';
-import Mobile from './mobile/Mobile';
-import { useMediaQuery,Flex } from '@chakra-ui/react';
+import React from "react";
+// import Laptop from "./laptop/Laptop";
+// import Mobile from "./mobile/Mobile";
+// import { useMediaQuery, Flex } from "@chakra-ui/react";
+import ProfileSection from "../../sections/resume/ProfileSection";
 
 const Profile = () => {
-    const [isMobile] = useMediaQuery('(max-width: 500px)');
+  //   const [isMobile] = useMediaQuery("(max-width: 500px)");
 
-    return (
-        <Flex 
-        justify="center" 
-        align="center" 
-        height="100vh" 
-        bg="gray.50"
-    >
-        {isMobile ? <Mobile /> : <Laptop />}
-    </Flex>
-    )
-}
+  return <ProfileSection />;
+};
 
-export default Profile
+export default Profile;

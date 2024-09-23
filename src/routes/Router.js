@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "portfolio",
-        element: <LazyComponent path="portfolio/Work" />,
+        element: <LazyComponent path="portfolio/Portfolio" />,
       },
       {
         path: "profile",

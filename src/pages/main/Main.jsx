@@ -11,11 +11,11 @@ const Main = () => {
   return (
     <div>
       <Wrap />
-      {/* <Slide />
+      <Slide />
       <Portfolio />
-      <About /> */}
-      <Service />
+      <About />
       <Cube />
+      <Service />
       <Contact />
     </div>
   );
