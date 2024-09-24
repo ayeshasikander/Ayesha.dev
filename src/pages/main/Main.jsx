@@ -5,16 +5,16 @@ import Contact from "../contact/Contact";
 import Wrap from "../../components/wrap/Wrap";
 import Slide from "../../components/slider/Slide";
 import Portfolio from "../portfolio/Portfolio";
-import Skills from "../../sections/skill/Skills";
+import Tech from "../../sections/skill/Tech";
 
 const Main = () => {
   return (
     <div>
       <Wrap />
-      <Slide />
+      <Tech/>
       <Portfolio />
       <About />
-      <Skills />
+      <Slide />
       <Service />
       <Contact />
     </div>

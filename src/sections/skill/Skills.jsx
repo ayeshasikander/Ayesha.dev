@@ -1,18 +1,30 @@
-import { Typography } from "antd";
-import { Box } from "@chakra-ui/react";
-import React, { useState, useEffect } from "react";
+import { Flex } from "@chakra-ui/react";
+import React, { useState, useEffect, useRef } from "react";
 import Cube from "../cubeFlex/Cube";
 import { svgIcon } from "../../assets/svgIcon";
 
-
-const getRandomWords = () => {
-  const randomWords = [
-    [svgIcon.redux, svgIcon.react, svgIcon.axios, "React", "Random", "3D", "Cube"],
-    ["Front", "Back", "Left", "Right", "Top", "Bottom"],
-    ["Program", "Design", "Code", "Chakra", "AntD", "Fun"],
+const getRandomIcons = () => {
+  const allIcons = [
+    svgIcon.redux,
+    svgIcon.react,
+    svgIcon.axios,
+    svgIcon.sass,
+    svgIcon.javascript,
+    svgIcon.mui,
+    svgIcon.tailwincss,
+    svgIcon.antd,
+    svgIcon.bootstrap,
+    svgIcon.vite,
+    svgIcon.mongodb,
+    svgIcon.express,
+    svgIcon.node,
+    svgIcon.router,
+    svgIcon.github,
   ];
-  const index = Math.floor(Math.random() * randomWords.length);
-  return randomWords[index];
+
+  // Shuffle and return exactly 6 icons for the 6 sides of the cube
+  const shuffledIcons = allIcons.sort(() => 0.5 - Math.random());
+  return shuffledIcons.slice(0, 6);
 };
 
 const generateCircularPositions = (centerX, centerY, radius, count) => {
@@ -28,58 +40,68 @@ const generateCircularPositions = (centerX, centerY, radius, count) => {
 
 const Skills = () => {
   const [cubes, setCubes] = useState([]);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-    const radius = 300;
-    const cubeCount = 10;
+    const initializeCubes = () => {
+      if (containerRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        const containerHeight = containerRef.current.offsetHeight;
 
-    const surroundingCubes = generateCircularPositions(
-      centerX,
-      centerY,
-      radius,
-      cubeCount
-    ).map((position) => ({
-      position,
-      size: 80, // Smaller size for surrounding cubes
-      words: getRandomWords(),
-    }));
+        const centerX = containerWidth / 2;
+        const centerY = containerHeight / 2;
+        const radius = Math.min(containerWidth * 0.4, containerHeight * 0.4);
+        const cubeCount = 10;
 
-    // Central cube (large)
-    const centralCube = {
-      position: { x: centerX - 100, y: centerY - 100 }, // Centered
-      size: 200, // Larger size
-      words: getRandomWords(),
+        const surroundingCubes = generateCircularPositions(
+          centerX,
+          centerY,
+          radius,
+          cubeCount
+        ).map((position) => ({
+          position,
+          size: Math.min(80, radius / 4),
+          icons: getRandomIcons(),
+        }));
+
+        // Central cube (larger)
+        const centralCube = {
+          position: { x: centerX, y: centerY },
+          size: Math.min(200, radius / 2), // Larger size
+          icons: getRandomIcons(),
+        };
+
+        setCubes([centralCube, ...surroundingCubes]);
+      }
     };
 
-    setCubes([centralCube, ...surroundingCubes]);
+    initializeCubes();
+
+    const intervalId = setInterval(() => {
+      initializeCubes();
+    }, 5000);
+
+    return () => clearInterval(intervalId);
   }, []);
 
- 
   return (
-    <Box
+    <Flex
       className="skills"
-      bgColor="blue"
-      height={"120vh"}
+      height={"70%"}
       width={"100%"}
-      p={5}
-      display={"flex"}
-      justifyContent={"center"}
-      alignItems={"center"}
+      ref={containerRef}
       position="relative"
       overflow="hidden"
     >
-      <Typography>Skills</Typography>
       {cubes.map((cube, index) => (
         <Cube
           key={index}
           position={cube.position}
-          words={cube.words}
+          icons={cube.icons}
           size={cube.size}
         />
       ))}
-    </Box>
+    </Flex>
   );
 };
 

@@ -1,90 +1,144 @@
-// import {
-//   Box,
-//   Flex,
-//   Avatar,
-//   HStack,
-//   IconButton,
-//   useDisclosure,
-//   useColorModeValue,
-//   Stack,
-// } from '@chakra-ui/react';
-// import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-// import { image } from '../../assets/image';
-// // import '../../style/headerLayout/headerLayout.scss';
+// import { Box, Heading, Grid, GridItem } from "@chakra-ui/react";
+// import React, { useState, useEffect } from "react";
+// import Cube from "../cubeFlex/Cube";
+// import { svgIcon } from "../../assets/svgIcon";
+// import LineDivider from "../../components/line/LineDevder";
+// import SkillDesc from "./SkillDesc";
 
-// const Links = [
-//   'Home', 'Portfolio', 'Contact',
-//   <Avatar
-//     size={'sm'}
-//     src={
-//       'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-//     }
-//   />
-// ]
+// const getRandomIcons = () => {
+//   const allIcons = [
+//     svgIcon.redux,
+//     svgIcon.react,
+//     svgIcon.axios,
+//     svgIcon.sass,
+//     svgIcon.javascript,
+//     svgIcon.mui,
+//     svgIcon.tailwincss,
+//     svgIcon.antd,
+//     svgIcon.bootstrap,
+//     svgIcon.vite,
+//     svgIcon.mongodb,
+//     svgIcon.express,
+//     svgIcon.node,
+//     svgIcon.router,
+//     svgIcon.github,
+//   ];
 
-// const NavLink = ({ children }) => {
+//   // Shuffle and return exactly 6 icons for the 6 sides of the cube
+//   const shuffledIcons = allIcons.sort(() => 0.5 - Math.random());
+//   return shuffledIcons.slice(0, 6);
+// };
+
+// const generateCircularPositions = (centerX, centerY, radius, count) => {
+//   const angleIncrement = (2 * Math.PI) / count;
+//   return Array.from({ length: count }).map((_, index) => {
+//     const angle = index * angleIncrement;
+//     return {
+//       x: centerX + radius * Math.cos(angle),
+//       y: centerY + radius * Math.sin(angle),
+//     };
+//   });
+// };
+
+// const Skills = () => {
+//   const [cubes, setCubes] = useState([]);
+
+//   useEffect(() => {
+//     const initializeCubes = () => {
+//       const centerX = window.innerWidth / 2;
+//       const centerY = window.innerHeight / 2;
+//       const radius = Math.min(
+//         window.innerWidth * 0.4,
+//         window.innerHeight * 0.4
+//       );
+//       const cubeCount = 10;
+
+//       const surroundingCubes = generateCircularPositions(
+//         centerX,
+//         centerY,
+//         radius,
+//         cubeCount
+//       ).map((position) => ({
+//         position,
+//         size: Math.min(80, radius / 4),
+//         icons: getRandomIcons(),
+//       }));
+
+//       // Central cube (larger)
+//       const centralCube = {
+//         position: { x: centerX, y: centerY },
+//         size: Math.min(200, radius / 2), // Larger size
+//         icons: getRandomIcons(),
+//       };
+
+//       setCubes([centralCube, ...surroundingCubes]);
+//     };
+
+//     initializeCubes();
+
+//     const intervalId = setInterval(() => {
+//       initializeCubes();
+//     }, 5000);
+
+//     return () => clearInterval(intervalId);
+//   }, []);
+
 //   return (
 //     <Box
-//       as="a"
-//       px={3}
-//       py={2}
-//       rounded={'full'}
-//       color={'#EAE8D9'}
-//       _hover={{
-//         textDecoration: 'none',
-//         bg: useColorModeValue('#EAE8D9'),
-//         color: 'black',
-//       }}
-//       href={'#'}>
-//       {children}
-//     </Box>
-//   )
-// }
-
-// export default function Header() {
-//   const { isOpen, onOpen, onClose } = useDisclosure()
-
-//   return (
-//     <>
-//       <Box bg={useColorModeValue('black', 'black')} px={4}>
-//         <Flex h={16} alignItems={'center'} justifyContent={'space-between'} px={{ base: 0, md: 12 }}>
-//           <Box w={90}>
-//             <img src={image.logo2} alt="" />
-//           </Box>
-//           <Flex alignItems={'center'}>
-//             <HStack
-//               as={'nav'}
-//               spacing={4}
-//               display={{ base: 'none', md: 'flex' }}
-//               ml="auto"
-//             >
-//               {Links.map((link) => (
-//                 <NavLink key={link}>{link}</NavLink>
-//               ))}
-//             </HStack>
-//             <IconButton
-//               size={'md'}
-//               icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-//               aria-label={'Open Menu'}
-//               display={{ md: 'none' }}
-//               onClick={isOpen ? onClose : onOpen}
-//               ml={4}
-//             />
-
-//           </Flex>
-//         </Flex>
-
-//         {isOpen ? (
-//           <Box pb={4} display={{ md: 'none' }}>
-//             <Stack as={'nav'} spacing={4}>
-//               {Links.map((link) => (
-//                 <NavLink key={link}>{link}</NavLink>
-//               ))}
-//             </Stack>
-//           </Box>
-//         ) : null}
+//       width={"100%"}
+//       display={"flex"}
+//       flexDirection={"column"}
+//       justifyContent={"center"}
+//       alignItems={"center"}
+//     >
+//       <Box
+//         display={"flex"}
+//         justifyContent={"center"}
+//         flexDirection={"column"}
+//         alignItems={"center"}
+//         paddingTop={"2rem"}
+//       >
+//         <Heading align={"center"} fontSize={{ base: "xl", md: "2xl" }}>
+//           My Skills Overview
+//         </Heading>
+//         <LineDivider />
 //       </Box>
-//     </>
-//   )
-// }
+//       <Grid
+//         bgColor={"blue"}
+//         templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+//         gap={10}
+//         width={"100%"}
+//         height={"120vh"}
+//         padding={"0 2rem"}
+//         position="relative"
+//       >
+//         <GridItem>
+//           <Box
+//             // className="skills"
+//             // height={"100%"}
+//             // width={"100%"}
+//             // display={"flex"}
+//             // justifyContent={"center"}
+//             // alignItems={"center"}
+//             // position="absolute"
+//             // overflow="hidden"
+//           >
+//             {cubes.map((cube, index) => (
+//               <Cube
+//                 key={index}
+//                 position={cube.position}
+//                 icons={cube.icons}
+//                 size={cube.size}
+//               />
+//             ))}
+//           </Box>
+//         </GridItem>
+//         <GridItem width={"100%"}>
+//           <SkillDesc />
+//         </GridItem>
+//       </Grid>
+//     </Box>
+//   );
+// };
 
+// export default Skills;
