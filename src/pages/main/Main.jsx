@@ -10,13 +10,13 @@ import Skills from "../../sections/skill/Skills";
 const Main = () => {
   return (
     <div>
-      {/* <Wrap />
+      <Wrap />
       <Slide />
       <Portfolio />
-      <About /> */}
+      <About />
       <Skills />
-      {/* <Service />
-      <Contact /> */}
+      <Service />
+      <Contact />
     </div>
   );
 };
