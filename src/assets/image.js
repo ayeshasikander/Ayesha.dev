@@ -1,5 +1,5 @@
 import logo from './icons/Axis_sense-2.png';
-import logo2 from './icons/Axis_sense-1.png';
+import logo2 from './icons/axis (1).png';
 import slide1 from './images/avif.jpg';
 import slide2 from './images/s2.jpg';
 import slide3 from './images/s3.jpg';

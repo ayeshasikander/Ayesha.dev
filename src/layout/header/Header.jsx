@@ -9,19 +9,22 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { image } from "../../assets/image";
-import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Links = [
   { name: "Home", path: "/" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "Contact", path: "/contact" },
+  { name: "About", path: "/#about" },
+  { name: "Portfolio", path: "/#portfolio" },
+  { name: "Services", path: "/#service" },
+  { name: "Contact", path: "/#contact" },
 ];
 
 const NavLink = ({ name, path, isActive }) => {
-  const bg = useColorModeValue(isActive ? "#EAE8D9" : "", "");
-  const color = useColorModeValue(isActive ? "black" : "gray.600", "");
+  // const bg = useColorModeValue(isActive ? "#777" : "", "");
+  const border = useColorModeValue(isActive ? "1px solid #09c75e" : "", "");
+  const color = useColorModeValue(isActive ? "white" : " #777", "red.500");
 
   return (
     <Box
@@ -30,14 +33,17 @@ const NavLink = ({ name, path, isActive }) => {
       px={3}
       py={2}
       rounded={"full"}
-      bg={bg}
+      border={border}
       color={color}
-      fontWeight={isActive ? "bold" : "normal"}
+      fontSize={"18px"}
+      fontWeight={isActive ? "600" : "500"}
       _hover={{
-        textDecoration: "none",
-        bg: useColorModeValue("#EAE8D9"),
-        color: "black",
+        bg: useColorModeValue("transparent"),
+        color: "white",
+        border: "1px solid #09c75e",
       }}
+      // https://quomodosoft.com/html/glint/index.html#
+      textDecoration={"none"}
     >
       {name}
     </Box>
@@ -48,14 +54,27 @@ export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const location = useLocation();
 
+  const scrollToSection = () => {
+    const hash = location.hash;
+    if (hash) {
+      const section = document.querySelector(hash);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  useEffect(() => {
+    scrollToSection();
+  }, [location]);
+
   return (
     <>
       <Box
         px={4}
         bg={" rgba(245, 245, 245, 0.041)"}
         backdropFilter="blur(10px)"
-        boxShadow="0 8px 32px 0 rgba(31, 38, 135, 0.37)"
-        border="1px solid rgba(255, 255, 255, 0.18)"
+        boxShadow="0 1px 10px 0 #09c75e"
       >
         <Flex
           h={16}
@@ -63,7 +82,7 @@ export default function Header() {
           justifyContent={"space-between"}
           px={{ base: 0, md: 12 }}
         >
-          <Box w={'60px'}>
+          <Box w={"58px"}>
             <img src={image.logo2} alt="Logo" />
           </Box>
           <Flex alignItems={"center"}>
@@ -72,23 +91,20 @@ export default function Header() {
               spacing={4}
               display={{ base: "none", md: "flex" }}
               ml="auto"
+              textDecoration={"none !important"}
             >
               {Links.map((link) => (
                 <NavLink
+                  textDecoration="none"
                   key={link.name}
                   name={link.name}
                   path={link.path}
-                  isActive={location.pathname === link.path}
+                  isActive={location.pathname + location.hash === link.path}
                 />
               ))}
 
               <RouterLink to="/profile">
-                <Avatar
-                  size={"sm"}
-                  src={
-                    "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
-                  }
-                />
+                <Avatar size={"sm"} src={"https://via.placeholder.com/150"} />
               </RouterLink>
             </HStack>
             <IconButton
@@ -110,16 +126,11 @@ export default function Header() {
                   key={link.name}
                   name={link.name}
                   path={link.path}
-                  isActive={location.pathname === link.path}
+                  isActive={location.pathname + location.hash === link.path}
                 />
               ))}
               <RouterLink to="/profile">
-                <Avatar
-                  size={"sm"}
-                  src={
-                    "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
-                  }
-                />
+                <Avatar size={"sm"} src={"https://via.placeholder.com/150"} />
               </RouterLink>
             </Stack>
           </Box>

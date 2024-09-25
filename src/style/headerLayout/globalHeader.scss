@@ -1,11 +1,14 @@
 .global-header{
     line-height: normal !important;
     padding: 0 !important;
-    background-color: transparent !important;
+    // background-color: rgba(10, 10, 10, 0.993) !important;
+    background-color: #0B0D0E !important;
+    
     position: sticky !important;
     top: 0 !important;
     left: 0 !important;
     z-index: 100 !important;
+    // box-shadow:0 8px 32px 0 #09c75e;
     // color: rgba(245, 245, 245, 0.041);
     ;
 }

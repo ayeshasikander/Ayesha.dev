@@ -10,13 +10,25 @@ import Tech from "../../sections/skill/Tech";
 const Main = () => {
   return (
     <div>
-      <Wrap />
-      <Tech/>
-      <Portfolio />
-      <About />
+      <div id="wrap">
+        <Wrap />
+      </div>
+      <div id="tech">
+        <Tech />
+      </div>
+      <div id="portfolio">
+        <Portfolio />
+      </div>
+      <div id="about">
+        <About />
+      </div>
       <Slide />
-      <Service />
-      <Contact />
+      <div id="service">
+        <Service />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </div>
   );
 };
