@@ -22,7 +22,6 @@ const Links = [
 ];
 
 const NavLink = ({ name, path, isActive }) => {
-  // const bg = useColorModeValue(isActive ? "#777" : "", "");
   const border = useColorModeValue(isActive ? "1px solid #09c75e" : "", "");
   const color = useColorModeValue(isActive ? "white" : " #777", "red.500");
 
