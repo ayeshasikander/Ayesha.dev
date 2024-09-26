@@ -1,26 +1,22 @@
-/* Custom dots styling */
 .custom-dots .slick-dots {
   position: absolute;
-  top: 50%; /* Center vertically */
-  right: 50px; /* Move to the left end */
-  transform: translateY(-50%); /* Vertically center */
-  z-index: 10; /* Ensure it's above other elements */
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  z-index: 10;
 
   display: flex;
   align-items: flex-end;
-  flex-direction: column; /* Stack dots vertically */
-  gap: 2rem; /* Add 20px gap between dots */
-  justify-content: center; /* Ensure vertical centering */
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
 }
 
-/* Style for individual dots */
 .custom-dots .slick-dots li button {
-  // width: 12px;
-  // height: 12px;
   border-radius: 50%;
-  background-color: white; /* Set the dot color to white */
-  opacity: 0.7; /* Make dots slightly transparent */
-  border: none; /* Remove default border */
+  background-color: white;
+  opacity: 0.7;
+  border: none;
   transition: opacity 0.3s ease, background-color 0.3s ease;
   border-radius: 50%;
   border: 2px solid #ffffff;
@@ -29,18 +25,88 @@
 }
 
 .ant-carousel .slick-dots li.slick-active {
-    width: 16px;
+  width: 16px;
 }
 
-/* Active dot style */
 .custom-dots .slick-dots li.slick-active button {
-  background-color: #1890ff; /* Active dot color */
+  background-color: #1890ff;
   opacity: 1;
   width: auto;
 }
 
-/* Add hover effect on dots */
 .custom-dots .slick-dots li button:hover {
   opacity: 1;
-  background-color: #1890ff; /* Change color on hover */
+  background-color: #1890ff;
+}
+
+.slide_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: transparent;
+  .slide-content {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .slide-content-box {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+
+      .title {
+        color: white;
+        text-align: left;
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        // letter-spacing: -4px;
+        span {
+          color: #08d665;
+        }
+      }
+      .desc {
+        color: white;
+        display: flex;
+        text-align: left;
+        gap: 15px;
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        .line {
+          width: 4px;
+          // height: 50px;
+          background-color: #08d665;
+          margin-right: 10px;
+        }
+      }
+      .btn {
+        color: white;
+        button {
+          background: #08d665;
+          text-transform: uppercase;
+          color: white;
+          font-size: 1rem;
+          font-weight: bold;
+          border: none;
+          padding: 1.6rem 1.6rem;
+          .icon{
+            font-size: 1.6rem;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .slide-content2 {
+    background: transparent;
+  }
 }
