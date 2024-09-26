@@ -13,14 +13,14 @@ const Main = () => {
       <div id="wrap">
         <Wrap />
       </div>
+      <div id="about">
+        <About />
+      </div>
       <div id="tech">
         <Tech />
       </div>
       <div id="portfolio">
         <Portfolio />
-      </div>
-      <div id="about">
-        <About />
       </div>
       <Slide />
       <div id="service">

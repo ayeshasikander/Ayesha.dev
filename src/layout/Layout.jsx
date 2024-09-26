@@ -12,6 +12,7 @@ const AppLayout = () => {
     <Layout
       style={{
         minHeight: "100vh",
+        backgroundColor: "#0B0D0C",
       }}
     >
       <Header

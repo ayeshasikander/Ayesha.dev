@@ -57,8 +57,6 @@
       flex-direction: column;
       gap: 3rem;
 
-      
-
       .title {
         color: white;
         text-align: left;
@@ -95,7 +93,7 @@
           font-weight: bold;
           border: none;
           padding: 1.6rem 1.6rem;
-          .icon{
+          .icon {
             font-size: 1.6rem;
             margin-left: 10px;
           }
@@ -105,5 +103,11 @@
   }
   .slide-content2 {
     background: transparent;
+  }
+
+  @media screen and (max-width: 768px) {
+    .slide-content2 {
+      display: none;
+    }
   }
 }

@@ -1,7 +1,7 @@
 .slide-container {
   width: 100%;
   overflow: hidden;
-  background-color: rgba(39, 38, 38, 0.062);
+  background-color: "#08D665";
 
   .slide-title {
     font-size: 1rem;
@@ -16,9 +16,9 @@
     position: relative;
 
     .slide-text {
-      font-size: 6rem;
+      font-size: 2rem;
       text-transform: uppercase;
-      color: rgb(0, 0, 0);
+      color: #ffffff;
       font-weight: bold;
       flex-shrink: 0;
       height: 100%;

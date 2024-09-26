@@ -12,7 +12,10 @@ import LineDevider from "../../components/line/LineDevder";
 
 export default function About() {
   return (
-    <Container maxW={"7xl"}>
+    <Container
+      maxW={"7xl"}
+      // background={"bg_color"}
+    >
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
@@ -31,7 +34,7 @@ export default function About() {
             height={"300px"}
             rounded={"2xl"}
             boxShadow={"2xl"}
-            width={"full"}
+            width={"70%"}
             overflow={"hidden"}
           >
             <video
@@ -56,6 +59,7 @@ export default function About() {
             <Heading
               fontWeight={600}
               fontSize={{ base: "3xl", lg: "2xl" }}
+              color={"color_white"}
             >
               <Text
                 as={"span"}
@@ -76,7 +80,7 @@ export default function About() {
             </Heading>
             <LineDevider />
           </Box>
-          <Text color={"gray.500"}>
+          <Text color={"color_white"}>
             Snippy is a rich coding snippets app that lets you create your own
             code snippets, categorize them, and even sync them in the cloud so
             you can use them anywhere. All that is free!
@@ -86,15 +90,21 @@ export default function About() {
             direction={{ base: "column", sm: "row" }}
           >
             <Button
-              rounded={"full"}
+              rounded={"md"}
               size={"lg"}
-              fontWeight={"normal"}
               px={6}
               colorScheme={"#000000"}
-              bg={"#000000"}
-              _hover={{ bg: "#000000" }}
+              bg={"primaryColor"}
+              fontSize={"1rem"}
+              fontWeight={"bold"}
+              _hover={{
+                bg: "transparent",
+                color: "primaryColor",
+                border: "1px solid",
+                borderColor: "primaryColor",
+              }}
             >
-              Get started
+              DOWNLOAD CV
             </Button>
           </Stack>
         </Stack>

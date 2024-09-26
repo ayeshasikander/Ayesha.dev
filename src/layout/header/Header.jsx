@@ -40,6 +40,7 @@ const NavLink = ({ name, path, isActive }) => {
         bg: useColorModeValue("transparent"),
         color: "white",
         border: "1px solid #09c75e",
+        textDecoration: "none",
       }}
       // https://quomodosoft.com/html/glint/index.html#
       textDecoration={"none"}

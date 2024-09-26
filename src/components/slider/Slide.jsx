@@ -7,6 +7,11 @@ import LineDivider from "../line/LineDevder";
 const SlideContent = [
   "Javascript",
   "React js",
+  "Redux",
+  "Node js",
+  "Express js",
+  "Mongo DB",
+  "Mongoose",
   "Ant.d",
   "Tailwind",
   "Styled Components",
@@ -19,16 +24,6 @@ const SlideContent = [
 const Slide = () => {
   return (
     <Box className="slide-container">
-      <Box
-        display={"flex"}
-        justifyContent={"center"}
-        flexDirection={"column"}
-        alignItems={"center"}
-        paddingTop={"2rem"}
-      >
-        <Typography className="slide-title">Langauages & Libraries</Typography>
-        <LineDivider />
-      </Box>
       <Box className="slide-content">
         {SlideContent.map((slide, index) => (
           <Typography className="slide-text" key={index}>

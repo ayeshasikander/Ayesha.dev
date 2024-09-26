@@ -26,7 +26,7 @@ const features = [
 
 export default function Service() {
   return (
-    <Box position="relative">
+    <Box position="relative" bgColor={"bg_color"}>
       <Box
         position="absolute"
         top={0}
@@ -44,7 +44,7 @@ export default function Service() {
         position="relative"
         zIndex={1}
         p={4}
-        backgroundColor="rgba(255, 255, 255, 0.8)"
+        backgroundColor="bg_color"
       >
         <Box
           display="flex"
