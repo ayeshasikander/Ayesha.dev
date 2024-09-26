@@ -1,0 +1,16 @@
+.desc {
+    color: white;
+    display: flex;
+    text-align: left;
+    gap: 15px;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+
+    .line {
+      width: 5px;
+      background-color: #08d665;
+      margin-right: 10px;
+    }
+  }

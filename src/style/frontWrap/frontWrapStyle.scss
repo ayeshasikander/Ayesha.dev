@@ -1,12 +1,14 @@
 .slide-container {
   width: 100%;
   overflow: hidden;
-  background-color: "#08D665";
+  background-color: #08D665;
 
   .slide-title {
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
+    font-family: "Oswald", sans-serif !important;
+    text-transform: uppercase;
   }
 
   .slide-content {
@@ -55,7 +57,7 @@
   .slide-container {
     .slide-content {
       .slide-text {
-        font-size: 3rem !important;
+        font-size: 1,5rem !important;
       }
     }
   }

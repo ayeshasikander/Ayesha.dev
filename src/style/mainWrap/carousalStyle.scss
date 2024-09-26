@@ -1,6 +1,5 @@
 .custom-dots .slick-dots {
-  position: absolute;
-  top: 50%;
+  top: 10%;
   right: 50px;
   transform: translateY(-50%);
   z-index: 10;
@@ -10,6 +9,10 @@
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
+  pointer-events: all;
+  @media screen and (max-width: 768px) {
+    align-items: flex-start;
+  }
 }
 
 .custom-dots .slick-dots li button {
@@ -18,7 +21,6 @@
   opacity: 0.7;
   border: none;
   transition: opacity 0.3s ease, background-color 0.3s ease;
-  border-radius: 50%;
   border: 2px solid #08d665;
   box-shadow: 0 0 4px 2px #09c75e;
   padding: 0.5rem;
@@ -31,7 +33,6 @@
 .custom-dots .slick-dots li.slick-active button {
   background-color: #08d665;
   opacity: 1;
-  width: auto;
 }
 
 .custom-dots .slick-dots li button:hover {
@@ -43,71 +44,111 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  width: 100%;
   background: transparent;
+
   .slide-content {
-    background: transparent;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    // text-align: center;
+
     .slide-content-box {
-      width: 80%;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: 2rem;
 
       .title {
+        letter-spacing: -3px;
         color: white;
-        text-align: left;
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 800;
         text-transform: uppercase;
-        // letter-spacing: -4px;
+        font-family: "Oswald", sans-serif;
+
         span {
           color: #08d665;
         }
       }
+
       .desc {
         color: white;
         display: flex;
         text-align: left;
         gap: 15px;
         line-height: 1.5rem;
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-size: 1.1rem;
+        font-weight: 400;
+        font-family: "Rubik", sans-serif;
+
         .line {
           width: 4px;
-          // height: 50px;
           background-color: #08d665;
           margin-right: 10px;
         }
       }
+
       .btn {
-        color: white;
         button {
+          cursor: pointer;
           background: #08d665;
           text-transform: uppercase;
           color: white;
           font-size: 1rem;
           font-weight: bold;
           border: none;
-          padding: 1.6rem 1.6rem;
+          padding: 1.6rem 1.5rem;
+
           .icon {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             margin-left: 10px;
           }
         }
       }
     }
   }
+
   .slide-content2 {
-    background: transparent;
+    text-align: center;
+
+    .responsive-img {
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+    }
   }
 
   @media screen and (max-width: 768px) {
+    .slide-content {
+      text-align: center;
+    }
+
     .slide-content2 {
       display: none;
+    }
+
+    .slide-content-box {
+      padding: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+  
+    .title {
+      letter-spacing: 0px !important;
+      font-size: 1.5rem !important;
+    }
+
+    .desc {
+      font-size: 1rem !important;
+    }
+
+    .btn button {
+      padding: 0.8rem 1.2rem;
     }
   }
 }

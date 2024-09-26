@@ -53,10 +53,11 @@ export default function SmallWithLogoLeft() {
     >
       <Container
         as={Stack}
-        maxW={"6xl"}
+        maxW={"full"}
         py={4}
         direction={{ base: "column", md: "row" }}
         spacing={4}
+        bgColor={"bg_color"}
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >

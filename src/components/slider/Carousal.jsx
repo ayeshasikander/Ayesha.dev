@@ -10,20 +10,19 @@ const Carousal = () => (
     className="custom-dots"
     style={{
       width: "100%",
-      height: "100vh",
     }}
   >
     <div>
       <Row className="slide_container">
-        <Col className="slide-content" flex={3}>
+        <Col xs={24} md={14} className="slide-content">
           <div className="slide-content-box">
             <Typography className="title">
-              <span>Imagination</span> is more <br /> important then knowledge
+              <span>Imagination</span> is more <br /> important than knowledge
             </Typography>
             <Typography className="desc">
               <div className="line"></div>
-              Together we the people achieve more then any single person could
-              ever do alone.
+              Together, we achieve more than any single person could ever do
+              alone.
             </Typography>
             <div className="btn">
               <Button>
@@ -33,22 +32,22 @@ const Carousal = () => (
           </div>
         </Col>
 
-        <Col className="slide-content2" flex={2}>
-          <img src={image.girl1} alt="" />
+        <Col xs={0} md={10} className="slide-content2">
+          <img src={image.girl1} alt="Slide 1" className="responsive-img" />
         </Col>
       </Row>
     </div>
 
     <div>
       <Row className="slide_container">
-        <Col className="slide-content" flex={3}>
+        <Col xs={24} md={14} className="slide-content">
           <div className="slide-content-box">
             <Typography className="title">
-              <span>Imagination</span> is more <br /> important then knowledge
+              <span>Imagination</span> is more <br /> important than knowledge
             </Typography>
             <Typography className="desc">
               <div className="line"></div>
-              Passionate React js developer focused on building practical
+              Passionate React.js developer focused on building practical
               solutions.
             </Typography>
             <div className="btn">
@@ -59,8 +58,8 @@ const Carousal = () => (
           </div>
         </Col>
 
-        <Col className="slide-content2" flex={2}>
-          <img src={image.girl3} alt="" />
+        <Col xs={0} md={10} className="slide-content2">
+          <img src={image.girl3} alt="Slide 2" className="responsive-img" />
         </Col>
       </Row>
     </div>

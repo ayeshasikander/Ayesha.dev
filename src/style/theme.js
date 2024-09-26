@@ -25,8 +25,12 @@ const theme = extendTheme({
     bg_uploads: "#f3f6ff",
   },
   fonts: {
-    heading: "'Archivo Black', sans-serif",
-    body: "'Archivo Black', sans-serif",
+    heading: "'Oswald', sans-serif",
+    body: "'Rubik', sans-serif",
+
+    // descFamily: "'Rubik', sans-serif",
+    // body: "'Rubik', sans-serif",
+
   },
 });
 

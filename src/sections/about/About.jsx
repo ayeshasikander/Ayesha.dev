@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { image } from "../../assets/image";
 import LineDevider from "../../components/line/LineDevder";
+import Bubble from "../../components/textAnimation/Bubble";
 
 export default function About() {
   return (
@@ -31,12 +32,13 @@ export default function About() {
         >
           <Box
             position={"relative"}
-            height={"300px"}
+            // height={"500px"}
             rounded={"2xl"}
             boxShadow={"2xl"}
             width={"70%"}
             overflow={"hidden"}
           >
+            <Bubble />
             <video
               autoPlay
               loop
@@ -58,7 +60,9 @@ export default function About() {
           <Box>
             <Heading
               fontWeight={600}
-              fontSize={{ base: "3xl", lg: "2xl" }}
+              fontSize={{ base: "4xl", sm: "5xl" }}
+              fontFamily={"heading"}
+              textTransform={"uppercase"}
               color={"color_white"}
             >
               <Text
@@ -80,6 +84,9 @@ export default function About() {
             </Heading>
             <LineDevider />
           </Box>
+          {/* <Text color={"color_white"} fontSize={"2xl"}>
+            Failure is the condiment That Gives Success
+          </Text> */}
           <Text color={"color_white"}>
             Snippy is a rich coding snippets app that lets you create your own
             code snippets, categorize them, and even sync them in the cloud so

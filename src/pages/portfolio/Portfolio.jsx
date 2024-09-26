@@ -15,7 +15,9 @@ const Portfolio = () => {
           alignItems={"center"}
           paddingTop={"2rem"}
         >
-         <Heading align={"center"} fontSize={"2xl"} color={"color_white"}>
+         <Heading align={"center"}  color={"color_white"} fontSize={{ base: "4xl", sm: "5xl" }}
+              fontFamily={"heading"}
+              textTransform={"uppercase"}>
           My Portfolio
         </Heading>
           <LineDivider />
