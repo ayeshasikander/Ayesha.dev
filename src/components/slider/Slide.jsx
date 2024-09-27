@@ -2,7 +2,6 @@ import { Box } from "@chakra-ui/react";
 import "../../style/frontWrap/frontWrapStyle.scss";
 import { Typography } from "antd";
 import React from "react";
-import LineDivider from "../line/LineDevder";
 
 const SlideContent = [
   "Javascript",

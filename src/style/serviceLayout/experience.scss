@@ -1,16 +1,32 @@
 .desc {
-    color: white;
-    display: flex;
-    text-align: left;
-    gap: 15px;
-    line-height: 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 400;
-    font-family: "Rubik", sans-serif;
+  color: white;
+  display: flex;
+  text-align: left;
+  gap: 15px;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
 
-    .line {
-      width: 5px;
-      background-color: #08d665;
-      margin-right: 10px;
-    }
+  .line {
+    width: 5px;
+    background-color: #08d665;
+    margin-right: 10px;
   }
+}
+
+.skill-card {
+  background-color: #0c0e0f;
+  box-shadow: 
+    /* Left shadow */ -5px 0 10px rgba(0, 13, 12, 0.5),
+    /* Right shadow */ 5px 0 10px rgba(0, 13, 12, 0.5),
+    /* Bottom shadow */ 0 5px 10px rgba(0, 13, 12, 0.5);
+  border-radius: 1px;
+}
+.skill-card:hover{
+  transform: scale(1.02);
+  background-color: #0a0909;
+ box-shadow: 2px 5px 15px #08d6654d;
+//  color: rgba(255, 255, 255, 0.233);
+    
+}
