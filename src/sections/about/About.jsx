@@ -32,27 +32,30 @@ export default function About() {
         >
           <Box
             position={"relative"}
-            // height={"500px"}
             rounded={"2xl"}
             boxShadow={"2xl"}
             width={"70%"}
             overflow={"hidden"}
           >
             <Bubble />
-            <video
-              autoPlay
-              loop
-              muted
-              controls
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
+            <Box
+              position={"absolute"}
+              top={"50%"}
+              left={"50%"}
+              transform={"translate(-50%, -50%)"}
+              width={"80%"}
             >
-              <source src={image.code} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              <img
+                src={image.girl3}
+                alt="about"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  filter: "drop-shadow(5px 5px 10px #08D665)",
+                }}
+              />
+            </Box>
           </Box>
         </Flex>
 
@@ -84,13 +87,15 @@ export default function About() {
             </Heading>
             <LineDevider />
           </Box>
-          {/* <Text color={"color_white"} fontSize={"2xl"}>
-            Failure is the condiment That Gives Success
-          </Text> */}
+
           <Text color={"color_white"}>
             Snippy is a rich coding snippets app that lets you create your own
             code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free!
+            you can use them anywhere. All that is free! Spend more time
+            focusing on the important aspects of your business. Turn to
+            McCartney HR LLC in Brooklyn, NY for HR solutions. As an advanced
+            virtual HR company, we are offering online HR systems that can be
+            customized depending on your business needs.
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}

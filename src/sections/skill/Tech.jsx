@@ -1,55 +1,69 @@
-import React from "react";
-import { Box } from "@chakra-ui/react";
-import SkillDesc from "./SkillDesc";
-import Skills from "./Skills";
+import {
+  Container,
+  Stack,
+  Box,
+  Heading,
+  Text,
+} from "@chakra-ui/react";
+import "../../style/serviceLayout/experience.scss";
 
-const Tech = () => {
+export default function Tech() {
   return (
-    <Box
-      className="tech"
-      margin={"auto"}
-      width={"90%"}
-      height={{
-        lg: "100vh",
-        base: "100%",
-      }}
-      display={"flex"}
-      flexDirection={{
-        base: "column",
-        lg: "row",
-      }}
-      alignItems={"center"}
-      justifyContent={"center"}
-      position={"relative"}
-    >
-      <Box
-        width={{
-          lg: "50%",
-          base: "100%",
-        }}
-        display={"flex"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        padding={5}
-        height="100%"
+    <Container maxW={"6xl"}>
+      <Stack
+        align={"center"}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base:10 }}
+        direction={{ base: "column", md: "row" }}
+        width={"100%"}
       >
-        <SkillDesc />
-      </Box>
+        <Stack flex={1} spacing={{ base: 5, md: 10 }} position={"relative"}>
+          <Box  mb={8}>
+            <Heading
+              as="h1"
+              fontSize={{ base: "6xl", sm: "8xl" }}
+              position={"absolute"}
+              opacity={1.1}
+              color={"transparent"}
+              textTransform="uppercase"
+              fontWeight="bold"
+              fontFamily={"body"}
+            
+              sx={{
+                WebkitTextStrokeWidth: "1px",
+                WebkitTextStrokeColor: "rgba(255, 255, 255, 0.233)",
+              }}
+            >
+              Career
+            </Heading>
 
-      <Box
-        width={{
-          lg: "50%",
-          base: "100%",
-        }}
-        display={"flex"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        height="100%"
-      >
-        <Skills />
-      </Box>
-    </Box>
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: "4xl", sm: "5xl" }}
+              fontFamily={"heading"}
+              textTransform={"uppercase"}
+              color={"white"}
+            >
+              <span style={{ color: "#08D665", fontSize: "14px" }}>
+                MY EXPERIENCE
+              </span>
+              <br />
+              Experience and <span style={{ color: "#08D665" }}>skill</span>
+            </Heading>
+          </Box>
+        </Stack>
+
+        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Text className="desc" color={"color_white"}>
+            <div className="line"></div>
+            Snippy is a rich coding snippets app that lets you create your own
+            code snippets, categorize them.
+          </Text>
+        </Stack>
+      </Stack>
+
+    
+      {/* <Cube/> */}
+    </Container>
   );
-};
-
-export default Tech;
+}

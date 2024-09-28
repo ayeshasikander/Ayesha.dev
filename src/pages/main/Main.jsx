@@ -16,6 +16,7 @@ const Main = () => {
       <div id="about">
         <About />
       </div>
+      <Slide />
       <div id="service">
         <Service />
       </div>
@@ -25,7 +26,6 @@ const Main = () => {
       <div id="portfolio">
         <Portfolio />
       </div>
-      <Slide />
 
       <div id="contact">
         <Contact />

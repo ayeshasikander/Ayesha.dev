@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { skill } from "./skill";
 import "../../style/serviceLayout/experience.scss";
+import SkillProgress from "../skill/SkillProgress";
 
 export default function Experience() {
   return (
@@ -18,55 +19,22 @@ export default function Experience() {
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        py={{ base:10 }}
         direction={{ base: "column", md: "row" }}
+        width={"100%"}
       >
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          {/* <Box position="relative">
+        <Stack flex={1} spacing={{ base: 5, md: 10 }} position={"relative"}>
+          <Box  mb={8}>
             <Heading
               as="h1"
-              fontSize={{ base: "5xl", sm: "4xl" }}
-              position="absolute"
-              top="0"
-              left="0"
-              zIndex={1}
+              fontSize={{ base: "6xl", sm: "8xl" }}
+              position={"absolute"}
               opacity={1.1}
-              color="green"
-              textTransform="uppercase"
-              fontWeight="bold"
-              letterSpacing="wide"
-            >
-              My Career
-            </Heading>
-            <Heading
-             
-              fontWeight={600}
-              fontSize={{ base: "4xl", sm: "5xl" }}
-              fontFamily={"heading"}
-              textTransform={"uppercase"}
-              color={"color_white"}
-            >
-              <span style={{ color: "#08D665", fontSize: "14px" }}>
-                MY EXPERIENCE{" "}
-              </span>
-              <br />
-              Experience and <span style={{ color: "#08D665" }}>skill</span>
-            </Heading>
-          </Box> */}
-          <Box position="relative" mb={8}>
-            <Heading
-              as="h1"
-              fontSize={{ base: "7xl", sm: "9xl" }}
-              position="absolute"
-              top="50%"
-              left="50%"
-              transform="translate(-50%, -50%)"
-              opacity={1.1}
-              // color="green"
               color={"transparent"}
               textTransform="uppercase"
               fontWeight="bold"
-              letterSpacing="wide"
+              fontFamily={"body"}
+            
               sx={{
                 WebkitTextStrokeWidth: "1px",
                 WebkitTextStrokeColor: "rgba(255, 255, 255, 0.233)",
@@ -76,7 +44,6 @@ export default function Experience() {
             </Heading>
 
             <Heading
-              position={"absolute"}
               fontWeight={600}
               fontSize={{ base: "4xl", sm: "5xl" }}
               fontFamily={"heading"}
@@ -101,7 +68,7 @@ export default function Experience() {
         </Stack>
       </Stack>
 
-      <Container height={"50vh"} maxWidth={"6xl"}>
+      <Container  maxWidth={"6xl"} marginY={"3rem"}>
         <SimpleGrid
           spacing={3}
           templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
@@ -135,6 +102,7 @@ export default function Experience() {
           ))}
         </SimpleGrid>
       </Container>
+      <SkillProgress />
     </Container>
   );
 }

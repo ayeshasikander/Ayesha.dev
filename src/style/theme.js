@@ -4,7 +4,6 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   colors: {
     primaryColor: "#08D665",
-    // secondaryColor: "#992400ef",
     bg_color: "#0B0D0C",
     color_dark: "#252525",
     color_white: "#ffffff",
