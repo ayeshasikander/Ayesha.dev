@@ -7,11 +7,14 @@ import {
   Button,
   VStack,
   HStack,
+  Stack,
+  Text,
 } from "@chakra-ui/react";
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsGithub, BsDiscord } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import Robot from "../../components/textAnimation/Robot";
+import ContactBox from "./ContactBox";
 
 export default function Contact() {
   return (
@@ -29,26 +32,86 @@ export default function Contact() {
         borderRadius="lg"
         m={{ sm: 4, md: 16, lg: 10 }}
         p={{ sm: 5, md: 5, lg: 10 }}
-        width={"60%"}
+        width={"100%"}
       >
-        {/* https://adilnaseemsheikh.github.io/ */}
+        <div>
+          <Stack
+            align={"center"}
+            spacing={{ base: 8, md: 10 }}
+            py={{ base: 10 }}
+            direction={{ base: "column", md: "row" }}
+            width={"100%"}
+          >
+            <Stack flex={1} spacing={{ base: 5, md: 10 }} position={"relative"}>
+              <Box mb={8}>
+                <Heading
+                  as="h1"
+                  fontSize={{ base: "6xl", sm: "8xl" }}
+                  position={"absolute"}
+                  opacity={1.1}
+                  color={"transparent"}
+                  textTransform="uppercase"
+                  fontWeight="bold"
+                  fontFamily={"body"}
+                  sx={{
+                    WebkitTextStrokeWidth: "1px",
+                    WebkitTextStrokeColor: "rgba(255, 255, 255, 0.233)",
+                  }}
+                >
+                  Career
+                </Heading>
+
+                <Heading
+                  fontWeight={600}
+                  fontSize={{ base: "4xl", sm: "5xl" }}
+                  fontFamily={"heading"}
+                  textTransform={"uppercase"}
+                  color={"white"}
+                >
+                  <span style={{ color: "#08D665", fontSize: "14px" }}>
+                    MY EXPERIENCE
+                  </span>
+                  <br />
+                  Experience and <span style={{ color: "#08D665" }}>skill</span>
+                </Heading>
+              </Box>
+            </Stack>
+
+            <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+              <Text className="desc" color={"color_white"}>
+                <div className="line"></div>
+                Snippy is a rich coding snippets app that lets you create your
+                own code snippets, categorize them.
+              </Text>
+            </Stack>
+          </Stack>
+        </div>
         <Flex
           direction={{ base: "column", md: "row" }}
+          justifyContent={"space-evenly"}
           align={"center"}
           gap={{ base: 3, md: 5 }}
         >
-          <Box p={4}>
-            <Heading>Get in touch</Heading>
+          <ContactBox />
 
-            <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-              <VStack pl={0} spacing={3}>
+          <Box>
+            <Robot />
+          </Box>
+          <Box>
+            <Box
+            // py={{ base: 5, sm: 5, md: 8, lg: 10 }}
+            >
+              <VStack
+              // pl={0}
+              // spacing={3}
+              >
                 <Button
                   size="md"
                   height="48px"
                   variant="ghost"
                   color="#DCE2FF"
-                  _hover={{ border: "1px solid #C05A1A" }}
-                  leftIcon={<MdPhone color="#C05A1A" size="20px" />}
+                  _hover={{ border: "1px solid #08D665" }}
+                  leftIcon={<MdPhone color="#08D665" size="20px" />}
                 >
                   +92 3161248074
                 </Button>
@@ -57,8 +120,8 @@ export default function Contact() {
                   height="48px"
                   variant="ghost"
                   color="#DCE2FF"
-                  _hover={{ border: "1px solid #C05A1A" }}
-                  leftIcon={<MdEmail color="#C05A1A" size="20px" />}
+                  _hover={{ border: "1px solid #08D665" }}
+                  leftIcon={<MdEmail color="#08D665" size="20px" />}
                 >
                   sikanderayesha46@gmail.com
                 </Button>
@@ -67,8 +130,8 @@ export default function Contact() {
                   height="48px"
                   variant="ghost"
                   color="#DCE2FF"
-                  _hover={{ border: "1px solid #C05A1A" }}
-                  leftIcon={<MdLocationOn color="#C05A1A" size="20px" />}
+                  _hover={{ border: "1px solid #08D665" }}
+                  leftIcon={<MdLocationOn color="#08D665" size="20px" />}
                 >
                   Lahore, Pakistan
                 </Button>
@@ -76,16 +139,15 @@ export default function Contact() {
             </Box>
             <HStack
               mt={{ lg: 10, md: 10 }}
-              spacing={5}
-              px={5}
-              alignItems="flex-start"
+              alignItems="center"
+              justifyContent={"space-evenly"}
             >
               <IconButton
                 aria-label="facebook"
                 variant="ghost"
                 size="lg"
                 isRound
-                _hover={{ bg: "#C05A1A" }}
+                _hover={{ bg: "#08D665" }}
                 icon={<FaLinkedin size="28px" color="#ECECEC" />}
               />
               <IconButton
@@ -93,7 +155,7 @@ export default function Contact() {
                 variant="ghost"
                 size="lg"
                 isRound
-                _hover={{ bg: "#C05A1A" }}
+                _hover={{ bg: "#08D665" }}
                 icon={<BsGithub size="28px" color="#ECECEC" />}
               />
               <IconButton
@@ -101,13 +163,10 @@ export default function Contact() {
                 variant="ghost"
                 size="lg"
                 isRound
-                _hover={{ bg: "#C05A1A" }}
+                _hover={{ bg: "#08D665" }}
                 icon={<BsDiscord size="28px" color="#ECECEC" />}
               />
             </HStack>
-          </Box>
-          <Box>
-            <Robot />
           </Box>
         </Flex>
       </Box>

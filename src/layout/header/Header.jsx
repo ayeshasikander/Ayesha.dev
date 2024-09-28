@@ -16,8 +16,8 @@ import { useEffect } from "react";
 const Links = [
   { name: "Home", path: "/" },
   { name: "About", path: "/#about" },
-  { name: "Portfolio", path: "/#portfolio" },
   { name: "Services", path: "/#service" },
+  { name: "Portfolio", path: "/#portfolio" },
   { name: "Contact", path: "/#contact" },
 ];
 

@@ -61,30 +61,40 @@ export default function About() {
 
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Box>
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: "4xl", sm: "5xl" }}
-              fontFamily={"heading"}
-              textTransform={"uppercase"}
-              color={"color_white"}
-            >
-              <Text
-                as={"span"}
-                position={"relative"}
-                _after={{
-                  content: "''",
-                  width: "full",
-                  height: "30%",
-                  position: "absolute",
-                  bottom: 1,
-                  left: 0,
-                  bg: "red.400",
-                  zIndex: -1,
-                }}
-              >
-                About Me
-              </Text>
-            </Heading>
+            <Stack flex={1} spacing={{ base: 5, md: 10 }} position={"relative"}>
+              <Box mb={8}>
+                <Heading
+                  as="h1"
+                  fontSize={{ base: "6xl", sm: "8xl" }}
+                  position={"absolute"}
+                  opacity={1.1}
+                  color={"transparent"}
+                  textTransform="uppercase"
+                  fontWeight="bold"
+                  fontFamily={"body"}
+                  sx={{
+                    WebkitTextStrokeWidth: "1px",
+                    WebkitTextStrokeColor: "rgba(255, 255, 255, 0.233)",
+                  }}
+                >
+                  Career
+                </Heading>
+
+                <Heading
+                  fontWeight={600}
+                  fontSize={{ base: "4xl", sm: "5xl" }}
+                  fontFamily={"heading"}
+                  textTransform={"uppercase"}
+                  color={"white"}
+                >
+                  <span style={{ color: "#08D665", fontSize: "14px" }}>
+                    MY EXPERIENCE
+                  </span>
+                  <br />
+                  Experience and <span style={{ color: "#08D665" }}>skill</span>
+                </Heading>
+              </Box>
+            </Stack>
             <LineDevider />
           </Box>
 

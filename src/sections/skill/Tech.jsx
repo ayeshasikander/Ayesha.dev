@@ -1,11 +1,6 @@
-import {
-  Container,
-  Stack,
-  Box,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
+import { Container, Stack, Box, Heading, Text } from "@chakra-ui/react";
 import "../../style/serviceLayout/experience.scss";
+import Cube from "../../components/cube/Cube";
 
 export default function Tech() {
   return (
@@ -13,12 +8,12 @@ export default function Tech() {
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base:10 }}
+        py={{ base: 10 }}
         direction={{ base: "column", md: "row" }}
         width={"100%"}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }} position={"relative"}>
-          <Box  mb={8}>
+          <Box mb={8}>
             <Heading
               as="h1"
               fontSize={{ base: "6xl", sm: "8xl" }}
@@ -28,7 +23,6 @@ export default function Tech() {
               textTransform="uppercase"
               fontWeight="bold"
               fontFamily={"body"}
-            
               sx={{
                 WebkitTextStrokeWidth: "1px",
                 WebkitTextStrokeColor: "rgba(255, 255, 255, 0.233)",
@@ -61,9 +55,14 @@ export default function Tech() {
           </Text>
         </Stack>
       </Stack>
-
-    
-      {/* <Cube/> */}
+      <Container
+        maxW={"6xl"}
+        height={"100%"}
+        display={"flex"}
+        justifyContent={"center"}
+      >
+        <Cube />
+      </Container>
     </Container>
   );
 }

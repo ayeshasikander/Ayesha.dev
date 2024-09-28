@@ -1,5 +1,6 @@
 import React from "react";
-import { Carousel, Row, Col, Typography, Button } from "antd";
+import { Stack, Button } from "@chakra-ui/react";
+import { Carousel, Row, Col, Typography } from "antd";
 import { RiArrowRightCircleFill } from "react-icons/ri";
 import "../../style/mainWrap/carousalStyle.scss";
 import { image } from "../../assets/image";
@@ -24,11 +25,28 @@ const Carousal = () => (
               Together, we achieve more than any single person could ever do
               alone.
             </Typography>
-            <div className="btn">
-              <Button>
-                Getting Started <RiArrowRightCircleFill className="icon" />
+            <Stack
+              spacing={{ base: 4, sm: 6 }}
+              direction={{ base: "column", sm: "row" }}
+            >
+              <Button
+                rounded={"md"}
+                size={"lg"}
+                px={6}
+                colorScheme={"#000000"}
+                bg={"primaryColor"}
+                fontSize={"1rem"}
+                fontWeight={"bold"}
+                _hover={{
+                  bg: "transparent",
+                  color: "primaryColor",
+                  border: "1px solid",
+                  borderColor: "primaryColor",
+                }}
+              >
+                DOWNLOAD CV
               </Button>
-            </div>
+            </Stack>
           </div>
         </Col>
 
@@ -50,11 +68,28 @@ const Carousal = () => (
               Passionate React.js developer focused on building practical
               solutions.
             </Typography>
-            <div className="btn">
-              <Button>
-                Getting Started <RiArrowRightCircleFill className="icon" />
+            <Stack
+              spacing={{ base: 4, sm: 6 }}
+              direction={{ base: "column", sm: "row" }}
+            >
+              <Button
+                rounded={"md"}
+                size={"lg"}
+                px={6}
+                colorScheme={"#000000"}
+                bg={"primaryColor"}
+                fontSize={"1rem"}
+                fontWeight={"bold"}
+                _hover={{
+                  bg: "transparent",
+                  color: "primaryColor",
+                  border: "1px solid",
+                  borderColor: "primaryColor",
+                }}
+              >
+                DOWNLOAD CV
               </Button>
-            </div>
+            </Stack>
           </div>
         </Col>
 
