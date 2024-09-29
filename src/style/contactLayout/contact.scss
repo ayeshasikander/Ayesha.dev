@@ -1,5 +1,5 @@
 .form-container {
-//   width: 400px;
+  //   width: 400px;
   background: linear-gradient(#0b0d0c, #0b0d0c) padding-box,
     linear-gradient(145deg, transparent 35%, #000000, #08d665) border-box;
   border: 1px solid transparent;
@@ -12,6 +12,7 @@
   gap: 20px;
   box-sizing: border-box;
   border-radius: 16px;
+  margin: 1rem;
 }
 
 .form-container button:active {

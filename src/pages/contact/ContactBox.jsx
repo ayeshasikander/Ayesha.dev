@@ -4,13 +4,13 @@ import "../../style/contactLayout/contact.scss";
 const ContactBox = () => {
   return (
     <div>
-      <div class="form-container">
-        <form class="form">
-          <div class="form-group">
+      <div className="form-container">
+        <form className="form">
+          <div className="form-group">
             <label for="email">Email</label>
             <input type="text" id="email" name="email" required="" placeholder="your mail"/>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="textarea">How Can We Help You?</label>
             <textarea
               name="textarea"
@@ -22,7 +22,7 @@ const ContactBox = () => {
               {" "}
             </textarea>
           </div>
-          <button class="form-submit-btn" type="submit">
+          <button className="form-submit-btn" type="submit">
             Submit
           </button>
         </form>

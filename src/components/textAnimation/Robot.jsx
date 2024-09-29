@@ -4,7 +4,7 @@ import animationData from "../../assets/video/Animation.json";
 const Robot = () => {
   return (
     <Lottie
-      style={{ width: "100%", height: "400px" }}
+      style={{ width: "100%", height: "200px" }}
       animationData={animationData}
     />
   );

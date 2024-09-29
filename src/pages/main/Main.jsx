@@ -5,6 +5,7 @@ import Contact from "../contact/Contact";
 import Wrap from "../../components/wrap/Wrap";
 import Slide from "../../components/slider/Slide";
 import Portfolio from "../portfolio/Portfolio";
+import Testimonial from "../../sections/testimonial/Testimonial";
 
 const Main = () => {
   return (
@@ -26,7 +27,9 @@ const Main = () => {
       <div id="portfolio">
         <Portfolio />
       </div>
-
+      <div>
+        <Testimonial />
+      </div>
       <div id="contact">
         <Contact />
       </div>
