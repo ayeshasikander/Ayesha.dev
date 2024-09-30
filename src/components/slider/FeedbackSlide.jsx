@@ -9,16 +9,11 @@ const contentStyle = {
   color: "#fff",
   textAlign: "center",
   background: "transparent",
-//   fontSize: "2rem",
+  fontSize: "2rem",
   fontFamily: "'Oswald', sans-serif",
   lineHeight: "1.2",
   textTransform: "uppercase",
   fontWeight:"bold",
-//   height: {
-//     xs: "auto",
-//     md:"40vh",
-//     lg:"40vh",
-//   },
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -36,9 +31,10 @@ const FeedbackSlide = () => (
 
   
     <Carousel
-      arrows
+      arrows={false}
       infinite={false}
       dots={false}
+      autoplay={true}
       style={{ padding: "0 2rem" }}
     >
       <div>

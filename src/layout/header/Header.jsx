@@ -1,7 +1,6 @@
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
   IconButton,
   useDisclosure,
@@ -9,9 +8,11 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { CgMenuGridO } from "react-icons/cg";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { image } from "../../assets/image";
-import { useEffect } from "react";
+import Sidebar from "../sidebar/Sidebar";
+import { useEffect, useState } from "react";
 
 const Links = [
   { name: "Home", path: "/" },
@@ -42,7 +43,6 @@ const NavLink = ({ name, path, isActive }) => {
         border: "1px solid #09c75e",
         textDecoration: "none",
       }}
-      // https://quomodosoft.com/html/glint/index.html#
       textDecoration={"none"}
     >
       {name}
@@ -51,7 +51,13 @@ const NavLink = ({ name, path, isActive }) => {
 };
 
 export default function Header() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  const {
+    isOpen: isMobileMenuOpen,
+    onOpen: onMobileMenuOpen,
+    onClose: onMobileMenuClose,
+  } = useDisclosure();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
 
   const scrollToSection = () => {
@@ -67,6 +73,14 @@ export default function Header() {
   useEffect(() => {
     scrollToSection();
   }, [location]);
+
+  const onSidebarOpen = () => {
+    setIsSidebarOpen(true);
+  };
+
+  const onSidebarClose = () => {
+    setIsSidebarOpen(false);
+  };
 
   return (
     <>
@@ -103,22 +117,25 @@ export default function Header() {
                 />
               ))}
 
-              <RouterLink to="/profile">
-                <Avatar size={"sm"} src={"https://via.placeholder.com/150"} />
-              </RouterLink>
+              <CgMenuGridO
+                color="#09c75e"
+                fontSize={"2.2rem"}
+                cursor={"pointer"}
+                onClick={onSidebarOpen}
+              />
             </HStack>
             <IconButton
               size={"md"}
-              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              icon={isMobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
               aria-label={"Open Menu"}
               display={{ md: "none" }}
-              onClick={isOpen ? onClose : onOpen}
+              onClick={isMobileMenuOpen ? onMobileMenuClose : onMobileMenuOpen}
               ml={4}
             />
           </Flex>
         </Flex>
 
-        {isOpen ? (
+        {isMobileMenuOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {Links.map((link) => (
@@ -129,13 +146,12 @@ export default function Header() {
                   isActive={location.pathname + location.hash === link.path}
                 />
               ))}
-              <RouterLink to="/profile">
-                <Avatar size={"sm"} src={"https://via.placeholder.com/150"} />
-              </RouterLink>
             </Stack>
           </Box>
         ) : null}
       </Box>
+
+      <Sidebar isOpen={isSidebarOpen} onClose={onSidebarClose} />
     </>
   );
 }
