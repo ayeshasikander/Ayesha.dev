@@ -2,21 +2,21 @@ export const data=[
     {
         id:1,
         title:"Front End DEvelopment",
-        percent:85
+        percent:90
     },
     {
         id:2,
-        title:"ui ux developer",
+        title:"Progressive Web Apps",
         percent:80
     },
     {
         id:3,
-        title:"backend development",
-        percent:50
+        title:"Responsive Web Layout",
+        percent:85
     },
     {
         id:4,
-        title:"Resposnive ",
-        percent:90
+        title:"Full-Stack Web",
+        percent:70
     }
 ];

@@ -55,6 +55,7 @@ export default function SmallWithLogoLeft() {
         as={Stack}
         maxW={"full"}
         py={4}
+        px={20}
         direction={{ base: "column", md: "row" }}
         spacing={4}
         bgColor={"bg_color"}
@@ -62,30 +63,30 @@ export default function SmallWithLogoLeft() {
         align={{ base: "center", md: "center" }}
       >
         {" "}
-        <Text>© 2024. All rights reserved</Text>
+        <Text>ayesha sikander ©.dev 2024</Text>
         <Logo />
         <Stack direction={"row"} spacing={6}>
-        <Link to={""}>
+          <Link to={""}>
             {" "}
             <SocialButton label={"whatsapp"}>
-              <FaWhatsapp />
+              <FaWhatsapp color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
           <Link to={""}>
             {" "}
             <SocialButton label={"linkedin"}>
-              <FaLinkedin />
+              <FaLinkedin color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
           <Link to={"/"}>
             {" "}
             <SocialButton label={"Github"}>
-              <FaGithub />
+              <FaGithub color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
           <Link to={"/"}>
             <SocialButton label={"Twitter"}>
-              <FaTwitter />
+              <FaTwitter color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
         </Stack>

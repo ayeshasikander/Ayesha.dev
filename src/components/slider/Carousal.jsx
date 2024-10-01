@@ -1,7 +1,8 @@
 import React from "react";
 import { Stack, Button } from "@chakra-ui/react";
 import { Carousel, Row, Col, Typography } from "antd";
-import { RiArrowRightCircleFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
+import { RiArrowDownCircleFill } from "react-icons/ri";
 import "../../style/mainWrap/carousalStyle.scss";
 import { image } from "../../assets/image";
 
@@ -18,34 +19,41 @@ const Carousal = () => (
         <Col xs={24} md={14} className="slide-content">
           <div className="slide-content-box">
             <Typography className="title">
-              <span>Imagination</span> is more <br /> important than knowledge
+              <span className="name">Welcome to my portfolio!</span>
+              <br />
+              I'm Ayesha Sikander.
             </Typography>
             <Typography className="desc">
               <div className="line"></div>
-              Together, we achieve more than any single person could ever do
-              alone.
+              Passionate React.js developer focused on building practical
+              solutions.
             </Typography>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: "column", sm: "row" }}
             >
-              <Button
-                rounded={"md"}
-                size={"lg"}
-                px={6}
-                colorScheme={"#000000"}
-                bg={"primaryColor"}
-                fontSize={"1rem"}
-                fontWeight={"bold"}
-                _hover={{
-                  bg: "transparent",
-                  color: "primaryColor",
-                  border: "1px solid",
-                  borderColor: "primaryColor",
-                }}
-              >
-                DOWNLOAD CV
-              </Button>
+              <Link to="#portfolio">
+                {" "}
+                <Button
+                  rounded={"md"}
+                  size={"lg"}
+                  px={6}
+                  colorScheme={"#000000"}
+                  bg={"primaryColor"}
+                  fontSize={"1rem"}
+                  // fontWeight={"bold"}
+                  fontFamily={"'Rubik', sans-serif"}
+                  textTransform={"uppercase"}
+                  _hover={{
+                    bg: "transparent",
+                    color: "primaryColor",
+                    border: "1px solid",
+                    borderColor: "primaryColor",
+                  }}
+                >
+                  View My Projects <RiArrowDownCircleFill className="icon_down"/>
+                </Button>
+              </Link>
             </Stack>
           </div>
         </Col>
@@ -65,8 +73,7 @@ const Carousal = () => (
             </Typography>
             <Typography className="desc">
               <div className="line"></div>
-              Passionate React.js developer focused on building practical
-              solutions.
+              Explore my work or get in touch to start a project together.
             </Typography>
             <Stack
               spacing={{ base: 4, sm: 6 }}
@@ -79,7 +86,9 @@ const Carousal = () => (
                 colorScheme={"#000000"}
                 bg={"primaryColor"}
                 fontSize={"1rem"}
-                fontWeight={"bold"}
+                // fontWeight={"bold"}
+                fontFamily={"'Rubik', sans-serif"}
+                textTransform={"uppercase"}
                 _hover={{
                   bg: "transparent",
                   color: "primaryColor",

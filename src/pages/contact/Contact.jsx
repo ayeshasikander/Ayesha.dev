@@ -42,7 +42,7 @@ export default function Contact() {
             <Box mb={8}>
               <Heading
                 as="h1"
-                fontSize={{ base: "6xl", sm: "8xl" }}
+                fontSize={{  base: "4xl", sm: "6xl", md: "8xl"  }}
                 position={"absolute"}
                 opacity={1.1}
                 color={"transparent"}
@@ -54,7 +54,7 @@ export default function Contact() {
                   WebkitTextStrokeColor: "rgba(255, 255, 255, 0.233)",
                 }}
               >
-                Career
+                Contact
               </Heading>
 
               <Heading
@@ -71,10 +71,14 @@ export default function Contact() {
                     textAlign: "center",
                   }}
                 >
-                  MY EXPERIENCE
+                  Get in Touch
                 </span>
                 <br />
-                Experience and <span style={{ color: "#08D665" }}>skill</span>
+                Your Thoughts
+                <span style={{ color: "#08D665" }}>
+                  {" "}
+                  Matter
+                </span>
               </Heading>
             </Box>
           </Box>
@@ -152,7 +156,6 @@ export default function Contact() {
                 </Button>
               </VStack>
             </Box>
-           
           </Box>
         </Flex>
       </Box>

@@ -13,10 +13,7 @@ import Bubble from "../../components/textAnimation/Bubble";
 
 export default function About() {
   return (
-    <Container
-      maxW={"7xl"}
-      // background={"bg_color"}
-    >
+    <Container maxW={"7xl"}>
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
@@ -77,7 +74,7 @@ export default function About() {
                     WebkitTextStrokeColor: "rgba(255, 255, 255, 0.233)",
                   }}
                 >
-                  Career
+                  About me
                 </Heading>
 
                 <Heading
@@ -88,10 +85,11 @@ export default function About() {
                   color={"white"}
                 >
                   <span style={{ color: "#08D665", fontSize: "14px" }}>
-                    MY EXPERIENCE
+                    Crafting Digital
                   </span>
                   <br />
-                  Experience and <span style={{ color: "#08D665" }}>skill</span>
+                  Breathing Life into{" "}
+                  <span style={{ color: "#08D665" }}>Bytes</span>
                 </Heading>
               </Box>
             </Stack>
@@ -99,13 +97,15 @@ export default function About() {
           </Box>
 
           <Text color={"color_white"}>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free! Spend more time
-            focusing on the important aspects of your business. Turn to
-            McCartney HR LLC in Brooklyn, NY for HR solutions. As an advanced
-            virtual HR company, we are offering online HR systems that can be
-            customized depending on your business needs.
+            👋Hello! I'm Ayesha Sikander, a passionate web developer from
+            Pakistan specializing in Frontend development with React and
+            JavaScript. A 2023 graduate from Women University Multan, <br />
+            I'm on a mission to create user-centric web applications that make a
+            real impact. My expertise lies in crafting intuitive, interactive
+            interfaces, and I'm currently expanding into Full-Stack development
+            with Node.js. Through this portfolio, I'm excited to showcase my
+            projects and share my journey in software development. Join me as I
+            turn innovative ideas into digital realities!
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}

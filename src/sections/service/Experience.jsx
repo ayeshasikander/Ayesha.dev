@@ -19,12 +19,12 @@ export default function Experience() {
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base:10 }}
+        py={{ base: 10 }}
         direction={{ base: "column", md: "row" }}
         width={"100%"}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }} position={"relative"}>
-          <Box  mb={8}>
+          <Box mb={8}>
             <Heading
               as="h1"
               fontSize={{ base: "6xl", sm: "8xl" }}
@@ -34,7 +34,6 @@ export default function Experience() {
               textTransform="uppercase"
               fontWeight="bold"
               fontFamily={"body"}
-            
               sx={{
                 WebkitTextStrokeWidth: "1px",
                 WebkitTextStrokeColor: "rgba(255, 255, 255, 0.233)",
@@ -62,13 +61,13 @@ export default function Experience() {
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Text className="desc" color={"color_white"}>
             <div className="line"></div>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them.
+            Fueled by curiosity and creativity, I strive to turn ideas into
+            impactful digital experiences as a React.js Developer.
           </Text>
         </Stack>
       </Stack>
 
-      <Container  maxWidth={"6xl"} marginY={"3rem"}>
+      <Container maxWidth={"6xl"} marginY={"3rem"}>
         <SimpleGrid
           spacing={3}
           templateColumns="repeat(auto-fill, minmax(250px, 1fr))"

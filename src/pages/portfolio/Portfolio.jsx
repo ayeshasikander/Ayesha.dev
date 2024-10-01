@@ -25,19 +25,19 @@ const Portfolio = () => {
               <Box mb={8}>
                 <Heading
                   as="h1"
-                  fontSize={{ base: "6xl", sm: "8xl" }}
+                  fontSize={{  base: "4xl", sm: "6xl", md: "8xl" }}
                   position={"absolute"}
                   opacity={1.1}
                   color={"transparent"}
                   textTransform="uppercase"
-                  fontWeight="bold"
+                  // fontWeight="bold"
                   fontFamily={"body"}
                   sx={{
                     WebkitTextStrokeWidth: "1px",
                     WebkitTextStrokeColor: "rgba(255, 255, 255, 0.233)",
                   }}
                 >
-                  Career
+                  Portfolio
                 </Heading>
 
                 <Heading
@@ -48,10 +48,10 @@ const Portfolio = () => {
                   color={"white"}
                 >
                   <span style={{ color: "#08D665", fontSize: "14px" }}>
-                    MY EXPERIENCE
+                    MY Projects
                   </span>
                   <br />
-                  Experience and <span style={{ color: "#08D665" }}>skill</span>
+                  Working <span style={{ color: "#08D665" }}>project</span>
                 </Heading>
               </Box>
             </Stack>
@@ -59,8 +59,8 @@ const Portfolio = () => {
             <Stack flex={1} spacing={{ base: 5, md: 10 }}>
               <Text className="desc" color={"color_white"}>
                 <div className="line"></div>
-                Snippy is a rich coding snippets app that lets you create your
-                own code snippets, categorize them.
+                Every project is a step toward innovation, where creativity
+                meets functionality.
               </Text>
             </Stack>
           </Stack>
