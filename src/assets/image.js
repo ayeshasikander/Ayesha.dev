@@ -15,7 +15,6 @@ import pf4 from './images/projectFlicks/screencapture-radiologex-cl-netlify-app-
 import pf5 from './images/projectFlicks/screencapture-flickflex-netlify-app-2024-09-18-12_00_34.png';
 
 import codeImg from "./images/6.png";
-import code from './video/code.mp4';
 
 export const image = {
     logo,
@@ -34,6 +33,5 @@ export const image = {
     pf4,
     pf5,
 
-    codeImg,
-    code
+    codeImg
 }
