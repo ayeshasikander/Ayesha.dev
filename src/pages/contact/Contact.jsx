@@ -8,6 +8,7 @@ import {
   VStack,
   HStack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsGithub, BsDiscord } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
@@ -42,7 +43,7 @@ export default function Contact() {
             <Box mb={8}>
               <Heading
                 as="h1"
-                fontSize={{  base: "4xl", sm: "6xl", md: "8xl"  }}
+                fontSize={{ base: "4xl", sm: "6xl", md: "8xl" }}
                 position={"absolute"}
                 opacity={1.1}
                 color={"transparent"}
@@ -75,10 +76,7 @@ export default function Contact() {
                 </span>
                 <br />
                 Your Thoughts
-                <span style={{ color: "#08D665" }}>
-                  {" "}
-                  Matter
-                </span>
+                <span style={{ color: "#08D665" }}> Matter</span>
               </Heading>
             </Box>
           </Box>
@@ -96,30 +94,43 @@ export default function Contact() {
               alignItems="center"
               justifyContent={"space-evenly"}
             >
-              <IconButton
-                aria-label="facebook"
-                variant="ghost"
-                size="lg"
-                isRound
-                _hover={{ bg: "#08D665" }}
-                icon={<FaLinkedin size="28px" color="#ECECEC" />}
-              />
-              <IconButton
-                aria-label="github"
-                variant="ghost"
-                size="lg"
-                isRound
-                _hover={{ bg: "#08D665" }}
-                icon={<BsGithub size="28px" color="#ECECEC" />}
-              />
-              <IconButton
-                aria-label="discord"
-                variant="ghost"
-                size="lg"
-                isRound
-                _hover={{ bg: "#08D665" }}
-                icon={<BsDiscord size="28px" color="#ECECEC" />}
-              />
+              <Link to={"https://www.linkedin.com/in/ayesha-sikander/"} target="_blank"
+                rel="noopener noreferrer">
+                {" "}
+                <IconButton
+                  aria-label="linkedin"
+                  variant="ghost"
+                  size="lg"
+                  isRound
+                  _hover={{ bg: "#08D665" }}
+                  icon={<FaLinkedin size="28px" color="#ECECEC" />}
+                />
+              </Link>
+              <Link to={"https://github.com/ayeshasikander"} target="_blank"
+                rel="noopener noreferrer">
+                <IconButton
+                  aria-label="github"
+                  variant="ghost"
+                  size="lg"
+                  isRound
+                  _hover={{ bg: "#08D665" }}
+                  icon={<BsGithub size="28px" color="#ECECEC" />}
+                />
+              </Link>
+              <Link
+                to={"https://discord.com/users/848504137229402133"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton
+                  aria-label="discord"
+                  variant="ghost"
+                  size="lg"
+                  isRound
+                  _hover={{ bg: "#08D665" }}
+                  icon={<BsDiscord size="28px" color="#ECECEC" />}
+                />
+              </Link>
             </HStack>
             <Box>
               <VStack>

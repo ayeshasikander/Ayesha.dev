@@ -66,25 +66,25 @@ export default function SmallWithLogoLeft() {
         <Text>ayesha sikander ©.dev 2024</Text>
         <Logo />
         <Stack direction={"row"} spacing={6}>
-          <Link to={""}>
+          <Link to={"https://wa.me/+923161248074?text=Hello"} target="_blank" rel="noopener noreferrer">
             {" "}
             <SocialButton label={"whatsapp"}>
               <FaWhatsapp color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
-          <Link to={""}>
+          <Link to={"https://www.linkedin.com/in/ayesha-sikander/"}  target="_blank" rel="noreferrer">
             {" "}
             <SocialButton label={"linkedin"}>
               <FaLinkedin color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
-          <Link to={"/"}>
+          <Link to={"https://github.com/ayeshasikander"} target="_blank" rel="noreferrer">
             {" "}
             <SocialButton label={"Github"}>
               <FaGithub color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
-          <Link to={"/"}>
+          <Link to={"https://x.com/AyeshaSikander_?t=rsa2zoFD9mjcmU3az5e-UQ&s=08"}  target="_blank" rel="noreferrer">
             <SocialButton label={"Twitter"}>
               <FaTwitter color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>

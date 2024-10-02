@@ -8,19 +8,17 @@ const ProfileCard = () => {
   return (
     <div>
       <div className="card">
-        <div className="img"></div>
-       
         <p className="info">
-          I’m Walter, a multidisciplinary designer who focuses on telling my
-          clients’ stories visually, through enjoyable and meaningful
-          experiences. I specialize in responsive websites and functional user
-          interfaces.
+          Hi, I'm Ayesha Sikander I'm a passionate web developer with expertise
+          in Front-End Development. I focus on creating engaging and responsive
+          user interfaces, while also having the capability to develop basic
+          backend functionality.
         </p>
         <div className="share">
-          <Link className="icon" to="/">
+          <Link className="icon" to="https://github.com/ayeshasikander">
             <FaGithub />
           </Link>
-          <Link className="icon" to="/">
+          <Link className="icon" to="https://www.linkedin.com/in/ayesha-sikander/">
             <FaLinkedin />
           </Link>
           <Link className="icon" to="/">

@@ -6,17 +6,17 @@ export const skill = [
     },
     {
         id: 2,
-        title: "Intern at DIH Sanatzar",
-        desc: "Conducted computer skills workshops and managed student data, gaining hands-on experience in office responsibilities.",
-    },
-    {
-        id: 3,
         title: "Project: Body Mappr",
         desc: "Developed a web app for doctors to visually mark patient history and manage data, enhancing patient data management.",
     },
     {
-        id: 4,
+        id: 3,
         title: "Project: Edges",
         desc: "Created a business marketplace platform for managing client and business profiles, streamlining data management.",
+    },
+    {
+        id: 4,
+        title: "Intern at DIH Sanatzar",
+        desc: "Conducted computer skills workshops and managed student data, gaining hands-on experience in office responsibilities.",
     },
 ];
