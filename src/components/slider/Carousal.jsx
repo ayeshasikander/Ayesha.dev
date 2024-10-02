@@ -9,6 +9,8 @@ import { image } from "../../assets/image";
 const Carousal = () => (
   <Carousel
     effect="fade"
+    autoplay
+    autoplaySpeed={2000}
     className="custom-dots"
     style={{
       width: "100%",
