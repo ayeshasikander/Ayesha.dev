@@ -8,6 +8,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { URLS } from "../../assets/url/Url";
 import { image } from "../../assets/image";
 import { Link } from "react-router-dom";
 
@@ -66,25 +67,25 @@ export default function SmallWithLogoLeft() {
         <Text>ayesha sikander ©.dev 2024</Text>
         <Logo />
         <Stack direction={"row"} spacing={6}>
-          <Link to={"https://wa.me/+923161248074?text=Hello"} target="_blank" rel="noopener noreferrer">
+          <Link to={URLS.whatsappProfile} target="_blank" rel="noopener noreferrer">
             {" "}
             <SocialButton label={"whatsapp"}>
               <FaWhatsapp color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
-          <Link to={"https://www.linkedin.com/in/ayesha-sikander/"}  target="_blank" rel="noreferrer">
+          <Link to={URLS.linkedInProfile}  target="_blank" rel="noreferrer">
             {" "}
             <SocialButton label={"linkedin"}>
               <FaLinkedin color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
-          <Link to={"https://github.com/ayeshasikander"} target="_blank" rel="noreferrer">
+          <Link to={URLS.githubProfile} target="_blank" rel="noreferrer">
             {" "}
             <SocialButton label={"Github"}>
               <FaGithub color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>
           </Link>
-          <Link to={"https://x.com/AyeshaSikander_?t=rsa2zoFD9mjcmU3az5e-UQ&s=08"}  target="_blank" rel="noreferrer">
+          <Link to={URLS.twitterProfile}  target="_blank" rel="noreferrer">
             <SocialButton label={"Twitter"}>
               <FaTwitter color="#25D366" fontSize={"1.1rem"} />
             </SocialButton>

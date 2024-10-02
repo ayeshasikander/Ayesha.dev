@@ -10,7 +10,7 @@ import Testimonial from "../../sections/testimonial/Testimonial";
 const Main = () => {
   return (
     <div>
-      <div id="wrap">
+      <div id="/">
         <Wrap />
       </div>
 

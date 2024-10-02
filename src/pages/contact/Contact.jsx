@@ -13,6 +13,7 @@ import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsGithub, BsDiscord } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import Robot from "../../components/textAnimation/Robot";
+import { URLS } from "../../assets/url/Url";
 import ContactBox from "./ContactBox";
 
 export default function Contact() {
@@ -94,7 +95,7 @@ export default function Contact() {
               alignItems="center"
               justifyContent={"space-evenly"}
             >
-              <Link to={"https://www.linkedin.com/in/ayesha-sikander/"} target="_blank"
+              <Link to={URLS.linkedInProfile} target="_blank"
                 rel="noopener noreferrer">
                 {" "}
                 <IconButton
@@ -106,7 +107,7 @@ export default function Contact() {
                   icon={<FaLinkedin size="28px" color="#ECECEC" />}
                 />
               </Link>
-              <Link to={"https://github.com/ayeshasikander"} target="_blank"
+              <Link to={URLS.githubProfile} target="_blank"
                 rel="noopener noreferrer">
                 <IconButton
                   aria-label="github"
@@ -118,7 +119,7 @@ export default function Contact() {
                 />
               </Link>
               <Link
-                to={"https://discord.com/users/848504137229402133"}
+                to={URLS.discordProfile}
                 target="_blank"
                 rel="noopener noreferrer"
               >
