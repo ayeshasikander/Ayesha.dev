@@ -6,10 +6,11 @@ import Wrap from "../../components/wrap/Wrap";
 import Slide from "../../components/slider/Slide";
 import Portfolio from "../portfolio/Portfolio";
 import Testimonial from "../../sections/testimonial/Testimonial";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const Main = () => {
   return (
-    <div>
+    <div className="main">
       <div id="/">
         <Wrap />
       </div>
@@ -33,6 +34,7 @@ const Main = () => {
       <div id="contact">
         <Contact />
       </div>
+      <ScrollToTop />
     </div>
   );
 };

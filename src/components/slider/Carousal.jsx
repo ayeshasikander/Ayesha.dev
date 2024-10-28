@@ -81,6 +81,7 @@ const Carousal = () => (
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: "column", sm: "row" }}
             >
+              <a href="/Ayesha_Sikander.pdf">
               <Button
                 rounded={"md"}
                 size={"lg"}
@@ -99,7 +100,7 @@ const Carousal = () => (
                 }}
               >
                 DOWNLOAD CV
-              </Button>
+              </Button></a>
             </Stack>
           </div>
         </Col>
