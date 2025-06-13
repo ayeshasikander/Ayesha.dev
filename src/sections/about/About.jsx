@@ -111,7 +111,7 @@ export default function About() {
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
           >
-            <a href="/Ayesha_Sikander.pdf">
+            <a href="/Ayesha_Sikander_ReactJS_Developer.pdf">
               <Button
                 rounded={"md"}
                 size={"lg"}

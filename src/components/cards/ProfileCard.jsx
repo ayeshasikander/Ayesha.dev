@@ -44,7 +44,7 @@ const ProfileCard = () => {
             <FaXTwitter />
           </Link>
         </div>
-        <a href="/Ayesha_Sikander.pdf">
+        <a href="/Ayesha_Sikander_ReactJS_Developer.pdf">
           {" "}
           <button>Resume</button>
         </a>
