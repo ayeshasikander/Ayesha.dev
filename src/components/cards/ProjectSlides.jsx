@@ -14,8 +14,9 @@ export default function ProjectSlides() {
         slidesPerView={1}
         spaceBetween={10}
         autoplay={{
-          delay: 1000,
+          delay: 2500,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
         pagination={{
           clickable: true,
@@ -34,10 +35,7 @@ export default function ProjectSlides() {
             spaceBetween: 50,
           },
         }}
-        modules={[
-          Pagination,
-           Autoplay
-        ]}
+        modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
         {Practice.map((item) => (

@@ -16,7 +16,7 @@ export const skill = [
     },
     {
         id: 4,
-        title: "Intern at DIH Sanatzar",
-        desc: "Conducted computer skills workshops and managed student data, gaining hands-on experience in office responsibilities.",
+        title: "Project: Winco",
+        desc: "Built an AI-powered Telegram learning bot with interactive quizzes, lessons, and automated certificate generation using React.",
     },
 ];
