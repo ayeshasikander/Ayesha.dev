@@ -149,4 +149,4 @@ This project is private and belongs to Ayesha.
 
 ---
 
-**Built with ❤️ using React and Chakra UI**
+**Built with  React and Chakra UI**
