@@ -4,14 +4,10 @@ import {
   Box,
   Heading,
   Text,
-  SimpleGrid,
-  Card,
-  CardBody,
-  CardHeader,
 } from "@chakra-ui/react";
-import { skill } from "./skill";
 import "../../style/serviceLayout/experience.scss";
 import SkillProgress from "../skill/SkillProgress";
+import WorkExperience from "../../components/cards/WorkExperience";
 
 export default function Experience() {
   return (
@@ -50,10 +46,10 @@ export default function Experience() {
               color={"white"}
             >
               <span style={{ color: "#08D665", fontSize: "14px" }}>
-                MY EXPERIENCE
+                WORK EXPERIENCE
               </span>
               <br />
-              Experience and <span style={{ color: "#08D665" }}>skill</span>
+              Professional <span style={{ color: "#08D665" }}>Journey</span>
             </Heading>
           </Box>
         </Stack>
@@ -61,46 +57,14 @@ export default function Experience() {
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Text className="desc" color={"color_white"}>
             <div className="line"></div>
-            Fueled by curiosity and creativity, I strive to turn ideas into
-            impactful digital experiences as a React.js Developer.
+            2+ years of hands-on experience building modern web applications
+            with React.js, delivering high-quality solutions from internship to
+            full-time roles.
           </Text>
         </Stack>
       </Stack>
-
-      <Container maxWidth={"6xl"} marginY={"3rem"}>
-        <SimpleGrid
-          spacing={3}
-          templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
-        >
-          {skill.map((skill) => (
-            <Card className="skill-card" key={skill.id}>
-              <CardHeader>
-                <Heading
-                  size="md"
-                  color={"primaryColor"}
-                  fontWeight={600}
-                  fontSize={"20px"}
-                  textTransform={"uppercase"}
-                  fontFamily={"heading"}
-                >
-                  {" "}
-                  {skill.title}
-                </Heading>
-              </CardHeader>
-              <CardBody>
-                <Text
-                  color={"color_white"}
-                  fontWeight={400}
-                  fontSize={"15px"}
-                  fontFamily={"body"}
-                >
-                  {skill.desc}
-                </Text>
-              </CardBody>
-            </Card>
-          ))}
-        </SimpleGrid>
-      </Container>
+      {/* work experience section */}
+      <WorkExperience />
       <SkillProgress />
     </Container>
   );

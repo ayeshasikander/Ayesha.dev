@@ -97,15 +97,22 @@ export default function About() {
           </Box>
 
           <Text color={"color_white"}>
-            👋Hello! I'm Ayesha Sikander, a passionate web developer from
-            Pakistan specializing in Frontend development with React and
-            JavaScript. A 2023 graduate from Women University Multan, <br />
-            I'm on a mission to create user-centric web applications that make a
-            real impact. My expertise lies in crafting intuitive, interactive
-            interfaces, and I'm currently expanding into Full-Stack development
-            with Node.js. Through this portfolio, I'm excited to showcase my
-            projects and share my journey in software development. Join me as I
-            turn innovative ideas into digital realities!
+            👋 Hi! I'm Ayesha Sikander, a React.js Developer with 2+ years
+            building production-ready web applications in Lahore, Pakistan.
+            <br />
+            Currently at 724.One Ltd & NewbieLogics, I create responsive,
+            high-performance interfaces using React, TypeScript, Redux Toolkit,
+            and modern UI frameworks. From AI learning platforms to real-time
+            streaming systems.<br/> A 2023 graduate from Women University Multan with
+            a BS in Computer Science, I've evolved from a frontend intern to a
+            full-time developer, consistently pushing the boundaries of what's
+            possible on the web. From integrating Stripe payments and Firebase
+            authentication to building AI-driven chatbots and dynamic data
+            visualizations.
+            <br />
+            <span style={{ color: "#08D665" }}>
+              Let's create something amazing!
+            </span>
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
